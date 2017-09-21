@@ -1,0 +1,52 @@
+
+### Policy Routing
+http://stud.netgroup.uniroma2.it/~cgrl/2014/slides/8-pbr.pdf
+
+### Martian Source
+http://www.softpanorama.org/Net/Internet_layer/Routing/martian_source.shtml
+
+### Else
+- https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Security_Guide/sect-Security_Guide-Server_Security-Reverse_Path_Forwarding.html
+- /etc/sysctl.conf
+
+
+```bash
+#!/bin/bash
+
+VID=227
+DST_IP=10.99.116.21   # This can be anything
+SRC_IP=10.99.117.11
+GATEWAY=10.99.117.1
+GATE_DEV=ens3.117
+
+if ! grep v$VID /etc/iproute2/rt_tables; then
+  sudo echo "$VID v$VID" >> /etc/iproute2/rt_tables
+fi
+
+INTERFACES=$(ls /proc/sys/net/ipv4/conf/)
+
+if [ "$1" == "up" ]; then
+  ACTION=add
+  for INF in $INTERFACES; do
+    echo 0 > /proc/sys/net/ipv4/conf/$INF/rp_filter;  # doesn't seem to matter but log at the begining
+    echo 1 > /proc/sys/net/ipv4/conf/$INF/log_martians;
+    echo 1 > /proc/sys/net/ipv4/conf/$INF/accept_source_route;  # doesn't seem to matter
+    echo 1 > /proc/sys/net/ipv4/conf/$INF/send_redirects;  # doesn't seem to matter
+  done
+elif [ "$1" == "down" ]; then
+  ACTION=del
+  for INF in $INTERFACES; do
+    echo 0 > /proc/sys/net/ipv4/conf/$INF/rp_filter;
+    echo 1 > /proc/sys/net/ipv4/conf/$INF/log_martians;
+    echo 0 > /proc/sys/net/ipv4/conf/$INF/accept_source_route;
+    echo 0 > /proc/sys/net/ipv4/conf/$INF/send_redirects;
+  done
+fi
+
+ip rule $ACTION from $SRC_IP lookup v$VID
+ip rule list
+ip route $ACTION default via $GATEWAY dev $GATE_DEV src $SRC_IP table v$VID
+ip route flush cache
+ip route list table v$VID
+ip route get to $DST_IP from $SRC_IP
+```
