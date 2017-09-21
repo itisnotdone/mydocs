@@ -14,7 +14,7 @@ http://www.softpanorama.org/Net/Internet_layer/Routing/martian_source.shtml
 #!/bin/bash
 
 VID=117
-DST_IP=10.99.116.21   # This can be anything
+DST_IP=10.22.116.21   # This can be anything
 SRC_IP=10.99.117.11
 GATEWAY=10.99.117.1
 GATE_DEV=ens3.117
@@ -45,8 +45,15 @@ fi
 
 ip rule $ACTION from $SRC_IP lookup v$VID
 ip rule list
+
 ip route $ACTION default via $GATEWAY dev $GATE_DEV src $SRC_IP table v$VID
+or
+ip route $ACTION 10.22.0.0/16 via $GATEWAY dev $GATE_DEV src $SRC_IP table v$VID
+
 ip route flush cache
 ip route list table v$VID
 ip route get to $DST_IP from $SRC_IP
+
+# To make it permanent put following line at the corresponding interface
+post-up ip rule add from default lookup v117 && ip route add default via 10.99.117.1 dev $IFACE table v117
 ```
