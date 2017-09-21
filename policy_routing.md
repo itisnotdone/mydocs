@@ -13,7 +13,7 @@ http://www.softpanorama.org/Net/Internet_layer/Routing/martian_source.shtml
 ```bash
 #!/bin/bash
 
-VID=227
+VID=117
 DST_IP=10.99.116.21   # This can be anything
 SRC_IP=10.99.117.11
 GATEWAY=10.99.117.1
