@@ -4,6 +4,7 @@ http://stud.netgroup.uniroma2.it/~cgrl/2014/slides/8-pbr.pdf
 
 ### Martian Source
 http://www.softpanorama.org/Net/Internet_layer/Routing/martian_source.shtml
+https://wiki.gentoo.org/wiki/Policy_based_routing#Requirements
 
 ### Else
 - https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Security_Guide/sect-Security_Guide-Server_Security-Reverse_Path_Forwarding.html
