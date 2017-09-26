@@ -7,7 +7,7 @@
 ## Define official domains
 - [ ] Pick a domain to be used and seperate it into following set of environment
   - [ ] production, stage, and development(i.e., example.com, stage-example.com, dev-example.com)
-  - [ ] Create CA or self signed SSL certificates for each environment that will be used by various services such as 
+  - [ ] Create CA or self signed SSL certificates for each environment that will be used by various services
   - [ ] Create another self signed certificates for SSH authentication to be able to use CA signed public keys
 
 ## Build development environment with virtualization solutions
