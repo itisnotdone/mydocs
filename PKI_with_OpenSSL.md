@@ -23,4 +23,5 @@
   - https://modsecurity.org/
   - https://www.ssllabs.com/
   - https://lira.epac.to/DOCS-TECH/Security/Apache%20Security.pdf
+  - https://www.qualys.com/
 - https://www.feistyduck.com/books/bulletproof-ssl-and-tls/bulletproof-ssl-and-tls-introduction.pdf
