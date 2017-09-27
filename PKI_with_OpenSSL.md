@@ -24,6 +24,7 @@
   - https://www.ssllabs.com/
   - https://lira.epac.to/DOCS-TECH/Security/Apache%20Security.pdf
   - https://www.qualys.com/
-  - https://hg.mozilla.org/mozilla-central/raw-file/tip/security/nss/lib/ckfw/builtins/certdata.txt
-  - https://curl.haxx.se/docs/caextract.html
+  - Root CA
+    - https://hg.mozilla.org/mozilla-central/raw-file/tip/security/nss/lib/ckfw/builtins/certdata.txt
+    - https://curl.haxx.se/docs/caextract.html
 - https://www.feistyduck.com/books/bulletproof-ssl-and-tls/bulletproof-ssl-and-tls-introduction.pdf
