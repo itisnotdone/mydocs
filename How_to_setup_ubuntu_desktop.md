@@ -5,6 +5,8 @@
 - appearence
 - google chrome
 - sudoers
+- terminal
+- vi
 
 ```bash
 sudo apt update && sudo apt full-upgrade -y
