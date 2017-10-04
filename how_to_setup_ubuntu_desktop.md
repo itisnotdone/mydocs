@@ -1,6 +1,7 @@
 # How to setup Ubuntu desktop
 - Update and upgrade packages
 - language support
+- Unity Tweak tool
 - multiple workspace
 - appearence
 - essential packages
