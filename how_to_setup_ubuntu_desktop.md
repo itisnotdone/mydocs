@@ -1,20 +1,19 @@
 # How to setup Ubuntu desktop
-- Update and upgrade packages
-- language support
-- Unity Tweak tool
-- multiple workspace
-- appearence
-- essential packages
-- google chrome
-- sudoers
-- terminal
 - vi
-- git config for user and email
-- zfs
 
 
 ```bash
+# sudoers
+echo "don ALL=(ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/don
+
+# initial upgrade
 sudo apt update && sudo apt full-upgrade -y
+
+# Update and upgrade packages
+sudo apt install `check-language-support`
+im-config -n fcitx
+im-config -m
+update-locale LANG=en_US.UTF-8
 
 # essential packages
 sudo apt install -y byobu \
@@ -26,11 +25,28 @@ lxd \
 bridge-utils \
 openvswitch-switch
 
+# git config for user and email
+git config --global user.name "Don Draper"
+git config --global user.email "donoldfashioned@gmail.com"
 
 # Google Chrome
-wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key -y add -
-echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google.list
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | \
+  sudo apt-key add -
+echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | \
+  sudo tee /etc/apt/sources.list.d/google.list
+sudo apt update
 sudo apt install -y google-chrome-stable
+
+# after watching with `dconf watch /`
+# appearence for things
+dconf write /org/compiz/profiles/unity/plugins/unityshell/launcher-hide-mode 1
+dconf write /org/compiz/profiles/unity/plugins/core/hsize 2
+dconf write /org/compiz/profiles/unity/plugins/core/vsize 2
+
+# for gnome terminal
+profile="$(dconf list /org/gnome/terminal/legacy/profiles:/ | sed 's./..')"
+dconf write /org/gnome/terminal/legacy/profiles:/$profile/use-transparent-background true
+dconf write /org/gnome/terminal/legacy/profiles:/$profile/background-transparency-percent 20
 
 # ZFS
 cat /proc/partitions
@@ -44,11 +60,13 @@ sudo zfs set compression=lz4 p1/lxc
 sudo zfs set compression=lz4 p1/kvm
 sudo zfs list
 
-# sudoers
-echo "don ALL=(ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/don
-
 # LXD
-sudo lxd init --auto --network-address 0.0.0.0 --network-port 8443 --storage-backend zfs --storage-pool p1/lxc
+sudo lxd init \
+  --auto \
+  --network-address 0.0.0.0 \
+  --network-port 8443 \
+  --storage-backend zfs \
+  --storage-pool p1/lxc
 
 lxc config set core.trust_password $PASSWORD
 lxc config show
@@ -57,7 +75,10 @@ config:
   core.trust_password: true
   storage.zfs_pool_name: p1/lxc
 
-lxc image --debug --verbose copy ubuntu-daily:16.04 local: --alias ubuntu-16.04 --public --auto-update
+lxc image \
+  --debug \
+  --verbose \
+  copy ubuntu-daily:16.04 local: --alias ubuntu-16.04 --public --auto-update
 
 # OVS
 sudo ovs-vsctl add-br bra
@@ -65,11 +86,6 @@ for VID in 11 12 13 14 15; do sudo ovs-vsctl add-br bra-$VID bra $VID; done
 sudo ovs-vsctl show
 
 ```
-
-
-
-
-
 
 
 
