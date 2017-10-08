@@ -10,7 +10,7 @@ echo "don ALL=(ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/don
 sudo apt update && sudo apt full-upgrade -y
 
 # Update and upgrade packages
-sudo apt install `check-language-support`
+sudo apt -y install `check-language-support`
 im-config -n fcitx
 im-config -m
 update-locale LANG=en_US.UTF-8
