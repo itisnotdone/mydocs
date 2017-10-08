@@ -48,6 +48,7 @@ sudo apt update
 sudo apt install -y google-chrome-stable
 
 # after watching with `dconf watch /`
+# `dconf write` should be done locally due to X11 display
 # appearence for things
 dconf write /org/compiz/profiles/unity/plugins/unityshell/launcher-hide-mode 1
 dconf write /org/compiz/profiles/unity/plugins/core/hsize 2
