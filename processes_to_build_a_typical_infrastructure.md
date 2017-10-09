@@ -26,9 +26,11 @@
 - [ ] Directory service such as LDAP
 - [ ] Package repository such as mirror, proxy and Nexus
 - [ ] Baremetal provisioner such as MAAS and Foreman
-- [ ] Configuration automation tools such as Chef, Ansible and Puppet
+- [ ] Configuration automation solutions such as Chef, Ansible and Puppet
 - [ ] SQL Databases such as MySQL and PostgreSQL
 - [ ] NoSQL Databases such as MongoDB and Redis
 - [ ] Collecting logs and metrics
 - [ ] Reporting and Alerting
-- [ ] Continuous integration tools such as Jenkins
+- [ ] Loadbalancing and high-availability solutions such as Keepalived and Haproxy
+- [ ] Continuous integration solutions such as Jenkins
+
