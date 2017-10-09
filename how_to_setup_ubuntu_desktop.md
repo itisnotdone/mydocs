@@ -86,6 +86,8 @@ config:
   core.trust_password: true
   storage.zfs_pool_name: p1/lxc
 
+lxc remote add localhost https://localhost:8443
+
 lxc image \
   --debug \
   --verbose \
