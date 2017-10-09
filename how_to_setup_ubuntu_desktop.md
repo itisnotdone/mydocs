@@ -13,7 +13,7 @@ sudo apt update && sudo apt full-upgrade -y
 sudo apt -y install `check-language-support`
 im-config -n fcitx
 im-config -m
-update-locale \
+sudo update-locale \
   LANG="en_US.UTF-8" \
   LC_NUMERIC="en_US.UTF-8" \
   LC_TIME="en_US.UTF-8" \
@@ -27,6 +27,7 @@ update-locale \
 
 # essential packages
 sudo apt install -y byobu \
+unity-tweak-tool \
 git \
 vim \
 tree \
