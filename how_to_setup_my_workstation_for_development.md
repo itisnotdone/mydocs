@@ -83,5 +83,8 @@ ssh $user@$ip id
 gogetit list
 Please define default configuration for GoGetIt at ~/.gogetit/gogetit.yml.
 
-
+# knife solo
+# https://matschaffer.github.io/knife-solo/
+# https://github.com/chef/chef-dk/issues/603
+chef gem install knife-solo -v 0.7.0.pre
 ```
