@@ -3,6 +3,13 @@
 ```bash
 gogetit create solo01
 
+knife solo init $somewhere
+
+cd $somewhere
+
+vi Berksfile
+# Add cookbooks to download via berkshelf
+
 knife solo prepare ubuntu@solo01
 
 vi nodes/solo01.json
