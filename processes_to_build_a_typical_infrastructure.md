@@ -30,3 +30,4 @@
 - [ ] NoSQL Databases such as MongoDB and Redis
 - [ ] Collecting logs and metrics
 - [ ] Reporting and Alerting
+- [ ] Continuous Integration tools such as Jenkins
