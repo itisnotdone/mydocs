@@ -17,5 +17,11 @@ vi nodes/solo01.json
 
 knife solo cook ubuntu@solo01
 ```
+
+# How to use knife-solo
+```bash
+knife vault create $vault $item --json /path/to/the/item.json --search '*:*' -M client
+```
+
 ## TODO
 - bootstrap using local proxy or mirror
