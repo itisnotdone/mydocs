@@ -21,6 +21,8 @@ knife solo cook ubuntu@solo01
 # How to use knife-solo
 ```bash
 knife vault create $vault $item --json /path/to/the/item.json --search '*:*' -M client
+# or
+knife vault create $vault $item --json /path/to/the/item.json -A 'user_a,user_b,node01,node02' -M client
 ```
 
 ## TODO
