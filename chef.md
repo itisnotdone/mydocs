@@ -18,11 +18,15 @@ vi nodes/solo01.json
 knife solo cook ubuntu@solo01
 ```
 
-# How to use knife-solo
+# How to use knife-vault
 ```bash
+# to create a new vault
 knife vault create $vault $item --json /path/to/the/item.json --search '*:*' -M client
 # or
 knife vault create $vault $item --json /path/to/the/item.json -A 'user_a,user_b,node01,node02' -M client
+
+# to refresh key pairs if there are some news
+knife vault refresh $vault $item --clean-unknown-clients
 ```
 
 ## TODO
