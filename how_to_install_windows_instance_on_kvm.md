@@ -30,7 +30,7 @@
 - Update following devices with virtio drivers from the secondary CDROM
   - Ethernet Controller: "e:\NetKVM\w10\amd64"
   - PCI Simple Communication Controller: "e:\vioserial\w10\amd64"
-  - PCI Controller: "e:\Balloon\w10\amd64"
+  - PCI Device: "e:\Balloon\w10\amd64"
   - Microsoft Default Display Adaptor: "e:\qxldod\w10\amd64"
   
 
