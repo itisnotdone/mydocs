@@ -1,3 +1,25 @@
 - Download a Windows evaluations
 - [Download a virtio drivers for Windows as ISO](https://fedoraproject.org/wiki/Windows_Virtio_Drivers)
+- Open virt-manager
+- [Connection Details] -> [Storate], choose a pool and create a volume
+- Get back to virt-manager and launch an instance
+  - [Local install media (ISO image or CDROM)] -> [Forward]
+  - [Use ISO image] -> [Browse] and choose the image you downloaded
+  - Uncheck [Automatically detect operating system based on install media OS type] and choose a proper one(win8.1 as of now) -> [Forward]
+  - Set memory and cpus as much as you want -> [Forward]
+  - [Select or create custom storage] -> [Manage] and choose the volume you made -> [Forward]
+  - Set the instance name, check [Customize configuration before install] and choose a virtual network and portgroup you want -> [Forward]
+  - Make sure following devices are present before to begin installation and [Begin Installation]
+    - SCSI Controller
+      - Model: VirtIO SCSI
+    - Primary Disk
+      - Disk bus: SCSI
+    - Primary CDROM
+      - Source path: windows installation image
+    - Secondary CDROM
+      - Source path: Virtio driver image for windows
+    - NIC
+      - Device model: virtio
+    - Remove sound card, Tablet and USB Redirectors
 - 
+  
