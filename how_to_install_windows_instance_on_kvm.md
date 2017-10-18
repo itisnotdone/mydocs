@@ -1,4 +1,4 @@
-- Download a Windows evaluations
+- Download a Windows evaluations(In this case, windows 10)
 - [Download a virtio drivers for Windows as ISO](https://fedoraproject.org/wiki/Windows_Virtio_Drivers)
 - Open virt-manager
 - [Connection Details] -> [Storate], choose a pool and create a volume
@@ -21,5 +21,17 @@
     - NIC
       - Device model: virtio
     - Remove sound card, Tablet and USB Redirectors
-- 
+    - Do not forget to apply each device configuration if there is any change
+- Choose advanced installation options during the initial steps -> [Next]
+- There will be no volume available when choosing installation location since windows does not have the driver for virtio-scsi controller so you need to manually load the driver(e:\vioscsi\w10\amd64) using the virtio image in the secondary CDROM -> [Next]
+- Finish installation and boot
+- Set uesrname and password
+- Run [compmgmt] and open [device manager]
+- Update following devices with virtio drivers from the secondary CDROM
+  - Ethernet Controller: "e:\NetKVM\w10\amd64"
+  - PCI Simple Communication Controller: "e:\vioserial\w10\amd64"
+  - PCI Controller: "e:\Balloon\w10\amd64"
+  - Microsoft Default Display Adaptor: "e:\qxldod\w10\amd64"
+  
+
   
