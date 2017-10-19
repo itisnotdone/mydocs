@@ -76,9 +76,11 @@ lxc remote add --accept-certificate $hostname https://$ip:8443
 
 # enable to run virsh command remotly
 ssh-keygen -t rsa
-ssh-copy-id $user@$ip
-# Enter $user password and make sure following command works
+ssh-copy-id $user@$ip # Enter $user password
+# make sure following command works
 ssh $user@$ip id
+virsh -c qemu+ssh://$user@$ip/system list
+
 
 gogetit list
 Please define default configuration for GoGetIt at ~/.gogetit/gogetit.yml.
