@@ -1,0 +1,4 @@
+- Open Certificate Authority
+  - https://letsencrypt.org
+- Free Domain Name Providers
+  - http://www.websitebuildertop10.com/free-domain-name-search-and-registration
