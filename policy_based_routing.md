@@ -10,6 +10,8 @@ https://wiki.gentoo.org/wiki/Policy_based_routing#Requirements
 - https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Security_Guide/sect-Security_Guide-Server_Security-Reverse_Path_Forwarding.html
 - /etc/sysctl.conf
 
+For a server to be able to route packets to a specific client(destination), 
+
 
 ```bash
 #!/bin/bash
@@ -56,5 +58,6 @@ ip route list table v$VID
 ip route get to $DST_IP from $SRC_IP
 
 # To make it permanent put following line at the corresponding interface
-post-up ip rule add from default lookup v117 && ip route add default via 10.99.117.1 dev $IFACE table v117
+i.e.
+post-up ip rule add from default lookup v117 && ip route add 10.22.116.21 via 10.99.117.1 dev $IFACE src 10.99.117.11 table v117
 ```
