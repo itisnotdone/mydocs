@@ -11,10 +11,10 @@ https://wiki.gentoo.org/wiki/Policy_based_routing#Requirements
 - /etc/sysctl.conf
 
 When a server routes packets to a specific client(destination), the routing entry will be as follow.
-- Source: the IP addresse of the server's output interface
+- Source: the IP addresse of the output interface of the server
 - Gate Device: the output interface of the server
-- Gateway: the gateway IP of the source IP's network
-- DST: the IP addresse or CIDR of the clients
+- Gateway: the gateway IP of the network of source IP
+- Destination: the IP addresse or CIDR of the clients
 
 
 ```bash
