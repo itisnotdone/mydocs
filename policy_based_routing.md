@@ -10,7 +10,11 @@ https://wiki.gentoo.org/wiki/Policy_based_routing#Requirements
 - https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Security_Guide/sect-Security_Guide-Server_Security-Reverse_Path_Forwarding.html
 - /etc/sysctl.conf
 
-For a server to be able to route packets to a specific client(destination), 
+When a server routes packets to a specific client(destination), the routing entry will be as follow.
+- Source: the IP addresse of the server's output interface
+- Gate Device: the output interface of the server
+- Gateway: the gateway IP of the source IP's network
+- DST: the IP addresse or CIDR of the clients
 
 
 ```bash
