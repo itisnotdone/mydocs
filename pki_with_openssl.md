@@ -30,3 +30,4 @@
 - https://www.feistyduck.com/books/bulletproof-ssl-and-tls/bulletproof-ssl-and-tls-introduction.pdf
 - Difference between SSL and TLS
   - http://www.hostingadvice.com/how-to/tls-vs-ssl/
+    - "although the HTTP/2 standard itself does not require the use of encryption, most client implementations (Firefox, Chrome, Safari, Opera, IE, Edge) have said they will only support HTTP/2 over TLS, which makes encryption de facto mandatory."
