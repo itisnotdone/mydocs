@@ -15,9 +15,16 @@
 - To generate an RSA key, use the genrsa command
   - it’s best to stay away from the other algorithms(DES, 3DES, and SEED)
   - Private keys are stored in the so-called PEM format
-
-
-
+## Creating CSRs
+- if you want a field to be empty, you must enter a single dot (.) on the line, rather than just
+hit Return. If you do the latter, OpenSSL will populate the corresponding CSR field with the
+default value.
+  - For some fields there will be a default value, If you enter '.', the field will be left blank.
+  - Having a challenge password does not increase the security of the CSR in any way. Further, this field
+should not be confused with the key passphrase, which is a separate feature.
+- Unless you’re using some form of public key pinning and wish to continue using the existing key, it’s best practice to generate a new key every time you apply for a new certificate. Key generation is quick and inexpensive and reduces your exposure.
+## Creating Certificates Valid for Multiple Hostnames
+- There are two mechanisms for supporting multiple hostnames in a certificate. The first is to list all desired hostnames using an X.509 extension called Subject Alternative Name (SAN). The second is to use wildcards. You can also use a combination of the two approaches when it’s more convenient. In practice, for most sites, you can specify a bare domain name and a wildcard to cover all the subdomains (e.g., feistyduck.com and *.feistyduck.com).
 
 
 
