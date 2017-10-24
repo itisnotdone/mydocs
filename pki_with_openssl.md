@@ -26,6 +26,8 @@ should not be confused with the key passphrase, which is a separate feature.
 ## Creating Certificates Valid for Multiple Hostnames
 - There are two mechanisms for supporting multiple hostnames in a certificate. The first is to list all desired hostnames using an X.509 extension called Subject Alternative Name (SAN). The second is to use wildcards. You can also use a combination of the two approaches when it’s more convenient. In practice, for most sites, you can specify a bare domain name and a wildcard to cover all the subdomains (e.g., feistyduck.com and *.feistyduck.com).
 
+## Examining Certificates
+- the address of the CA’s Online Certificate Status Protocol (OCSP) responder, which can be used to check for certificate revocation in real time.
 
 
 
