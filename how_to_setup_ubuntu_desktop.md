@@ -36,6 +36,9 @@ lxd \
 bridge-utils \
 openvswitch-switch
 
+# byobu setting
+echo "set-option -g history-limit 100000" | tee -a ~/.byobu/.tmux.conf
+
 # git config for user and email
 git config --global user.name "Don Draper"
 git config --global user.email "donoldfashioned@gmail.com"
