@@ -12,9 +12,12 @@ user=
 # package update and upgrade
 sudo apt update && sudo apt full-upgrade -y
 
-sudo apt install -y lxd-client libvirt-dev libvirt-bin git tree
+sudo apt install -y lxd-client libvirt-dev libvirt-bin git tree byobu
 
 sudo reboot
+
+# byobu setting
+echo "set-option -g history-limit 100000" | tee -a ~/.byobu/.tmux.conf
 
 # vi
 # https://github.com/itisnotdone/mydotfile.git
