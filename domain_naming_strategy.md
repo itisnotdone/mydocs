@@ -15,5 +15,5 @@
   - *.stage.blahblah.com
   - *.intra.blahblah.com
   - This way, you can save costs 
-    - to buy certificates 
+    - to buy many certificates 
     - to manage and deploy site and CA certificates for servers and clients.
