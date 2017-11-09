@@ -11,6 +11,7 @@
 - Buy a certificate for SSL/TLS communication with a CSR that specifies all those defined domains as SAN(Subject Alt Name)s for example,
   - CN=blahblah.com
   - SAN=
+    - blahblah.com
     - *.blahblah.com
     - *.dev.blahblah.com
     - *.stage.blahblah.com
