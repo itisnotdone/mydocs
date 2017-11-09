@@ -9,13 +9,14 @@
     - https://www.pluralsight.com/blog/software-development/choose-internal-top-level-domain-name
     - https://social.technet.microsoft.com/wiki/contents/articles/34981.active-directory-best-practices-for-internal-domain-and-network-names.aspx
 - Buy a certificate for SSL/TLS communication with a CSR that specifies all those defined domains as SAN(Subject Alt Name)s for example,
-  - blahblah.com
-  - *.blahblah.com
-  - *.dev.blahblah.com
-  - *.stage.blahblah.com
-  - *.intra.blahblah.com
+  - CN=blahblah.com
+  - SAN=
+    - *.blahblah.com
+    - *.dev.blahblah.com
+    - *.stage.blahblah.com
+    - *.intra.blahblah.com
   - This way, you can save costs 
-    - to buy many certificates 
-    - to manage and deploy site and CA certificates for servers and clients.
+  - to buy many certificates 
+  - to manage and deploy site and CA certificates for servers and clients.
 - Setup DNS servers separately for internal and external domains
   - The internal DNS has to be acceable only by internal clients and hosts
