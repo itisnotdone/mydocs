@@ -1,0 +1,19 @@
+# Domain Naming Strategy
+- Buy an official and external domain from a DNS hosting service such as
+  - blahblah.com
+- Define internal domains using subdomains derived from the external domain, blahblah.com, such as
+  - dev.blahblah.com
+  - stage.blahblah.com
+  - intra.blahblah.com
+  - why should we use subdomains?
+    - https://www.pluralsight.com/blog/software-development/choose-internal-top-level-domain-name
+    - https://social.technet.microsoft.com/wiki/contents/articles/34981.active-directory-best-practices-for-internal-domain-and-network-names.aspx
+- Buy a certificate for SSL/TLS communication with a CSR that specifies all those defined domains as SAN(Subject Alt Name)s for example,
+  - blahblah.com
+  - *.blahblah.com
+  - *.dev.blahblah.com
+  - *.stage.blahblah.com
+  - *.intra.blahblah.com
+  - This way, you can save costs 
+    - to buy certificates 
+    - to manage and deploy site and CA certificates for servers and clients.
