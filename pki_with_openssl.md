@@ -30,7 +30,9 @@ should not be confused with the key passphrase, which is a separate feature.
 - the address of the CA’s Online Certificate Status Protocol (OCSP) responder, which can be used to check for certificate revocation in real time.
 
 
-
+## When checking certificates validation that are made by private CA
+- Clear browser history to delete old site certificates
+- Add(or remove and add) the CA bundle to make the validation succeed
 
 
 ## Reference
