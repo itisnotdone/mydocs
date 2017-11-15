@@ -50,3 +50,8 @@ should not be confused with the key passphrase, which is a separate feature.
 - Difference between SSL and TLS
   - http://www.hostingadvice.com/how-to/tls-vs-ssl/
     - "although the HTTP/2 standard itself does not require the use of encryption, most client implementations (Firefox, Chrome, Safari, Opera, IE, Edge) have said they will only support HTTP/2 over TLS, which makes encryption de facto mandatory."
+- https://www.openssl.org/docs
+  - https://www.openssl.org/docs/manmaster/man1/req.html
+  - https://www.openssl.org/docs/manmaster/man1/ca.html
+  - https://www.openssl.org/docs/manmaster/man1/x509.html
+  - https://www.openssl.org/docs/manmaster/man5/x509v3_config.html
