@@ -55,3 +55,5 @@ should not be confused with the key passphrase, which is a separate feature.
   - https://www.openssl.org/docs/manmaster/man1/ca.html
   - https://www.openssl.org/docs/manmaster/man1/x509.html
   - https://www.openssl.org/docs/manmaster/man5/x509v3_config.html
+- Cryptography of SSH
+  - https://www.mnin.org/write/2006_sshcrypto.html
