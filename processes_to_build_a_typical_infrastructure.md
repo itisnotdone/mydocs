@@ -23,9 +23,9 @@
 - [ ] How to cable and configure NICs with TORs
 
 ## Setup services using containers
+- [ ] Baremetal provisioner such as MAAS and Foreman
 - [ ] Directory service such as LDAP
 - [ ] Package repository such as mirror, proxy and Nexus
-- [ ] Baremetal provisioner such as MAAS and Foreman
 - [ ] Configuration automation solutions such as Chef, Ansible and Puppet
 - [ ] SQL Databases such as MySQL and PostgreSQL
 - [ ] NoSQL Databases such as MongoDB and Redis
