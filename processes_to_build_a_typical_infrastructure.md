@@ -5,10 +5,10 @@
 - [ ] How big host ID will be needed for each network
 
 ## Define official domains
-- [ ] Pick a domain to be used and seperate it into following set of environment
+- [ ] Pick a domain to be used and seperate it into the following set of environments
   - [ ] production, stage, and development(i.e., example.com, stage-example.com, dev-example.com)
-  - [ ] Create CA or self signed SSL certificates for each environment that will be used by various services
-  - [ ] Create another self signed certificates for SSH authentication to be able to use CA signed public keys
+  - [ ] Create a public key infrastrucrure(PKI) for the environments to provide CA signed certificates for various services.
+  - [ ] Create CA signed user public keys for SSH authentication so users can access servers with CA public key.
 
 ## Build development environment
 - [ ] Build virtualized networks as designed above using virtual switch solutions such as linux bridge and OVS
