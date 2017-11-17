@@ -7,3 +7,13 @@
 - It's FOSS
   - https://itsfoss.com
   - https://www.youtube.com/c/itsfoss
+
+
+- Terminal session recorder
+  - https://github.com/asciinema/asciinema
+  - https://asciinema.org/
+  
+- Desktop recoder as GIF
+  - https://github.com/phw/peek
+  
+- https://filmsbykris.com/v7/
