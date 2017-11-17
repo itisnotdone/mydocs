@@ -4,3 +4,6 @@
   - http://www.websitebuildertop10.com/free-domain-name-search-and-registration
 - JSON to YAML converter
   - https://www.json2yaml.com/
+- It's FOSS
+  - https://itsfoss.com
+  - https://www.youtube.com/c/itsfoss
