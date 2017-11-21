@@ -34,6 +34,8 @@ should not be confused with the key passphrase, which is a separate feature.
 - Clear browser history to delete old site certificates
 - Add(or remove and add) the CA bundle to make the validation succeed
 
+## Extended Key Usage
+- This extensions consists of a list of usages indicating purposes for which the certificate public key can be used.
 
 ## Reference
 - https://help.ubuntu.com/lts/serverguide/certificates-and-security.html
