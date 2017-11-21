@@ -37,6 +37,13 @@ should not be confused with the key passphrase, which is a separate feature.
 ## Extended Key Usage
 - This extensions consists of a list of usages indicating purposes for which the certificate public key can be used.
 
+## AIA(Authority Information Access) extention
+- AIA extension allows SSL/TLS clients (mostly web browsers) to go get the missing intermediate certificates, not presented by the server.
+- Servers that do not send the entire chain are in breach of the SSL/TLS standard.
+- Certificates are validated in order as a chain as follow.
+  - Site certificate -> Intermediate CA certificates -> Root CA certificate
+- https://www.tbs-certificates.co.uk/FAQ/en/453.html
+
 ## Reference
 - https://help.ubuntu.com/lts/serverguide/certificates-and-security.html
 - https://pki-tutorial.readthedocs.io/en/latest/
