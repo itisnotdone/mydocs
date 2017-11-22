@@ -42,7 +42,12 @@ should not be confused with the key passphrase, which is a separate feature.
 - Servers that do not send the entire chain are in breach of the SSL/TLS standard.
 - Certificates are validated in order as a chain as follow.
   - Site certificate -> Intermediate CA certificates -> Root CA certificate
+- Also contains OCSP URI
 - https://www.tbs-certificates.co.uk/FAQ/en/453.html
+
+## CRL vs OCSP vs OCSP stapling
+- OCSP stapling > OCSP > CRL
+- https://www.fir3net.com/Security/Concepts-and-Terminology/certificate-revocation.html
 
 ## Reference
 - https://help.ubuntu.com/lts/serverguide/certificates-and-security.html
