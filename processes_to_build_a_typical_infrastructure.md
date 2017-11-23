@@ -23,14 +23,25 @@
 - [ ] How to cable and configure NICs with TORs
 
 ## Setup services using containers
-- [ ] Baremetal provisioner such as MAAS and Foreman
-- [ ] Directory service such as LDAP
-- [ ] Package repository such as mirror, proxy and Nexus
-- [ ] Configuration automation solutions such as Chef, Ansible and Puppet
-- [ ] SQL Databases such as MySQL and PostgreSQL
-- [ ] NoSQL Databases such as MongoDB and Redis
+- [ ] Baremetal provisioner
+  - MAAS, Foreman
+- [ ] Directory service
+  - LDAP, Active Directory
+- [ ] Package repository
+  - Mirroring solutions, proxy and Nexus
+- [ ] Configuration automation solutions
+  - Chef, Ansible, Puppet
+- [ ] SQL Databases
+  - MySQL, PostgreSQL
+- [ ] NoSQL Databases
+  - MongoDB, Redis
+- [ ] Email or messenger tools to receive or subscribe notifications and alerts
+  - Postfix, Dovecot
+  - Slack, Hipchat, Rocket.Chat
 - [ ] Collecting logs and metrics
 - [ ] Reporting and Alerting
-- [ ] Loadbalancing and high-availability solutions such as Keepalived and Haproxy
-- [ ] Continuous integration solutions such as Jenkins
+- [ ] Loadbalancing and high-availability
+  - Keepalived, Haproxy
+- [ ] Continuous integration solutions
+  - Jenkins, Bamboo
 
