@@ -35,6 +35,8 @@
   - MySQL, PostgreSQL
 - [ ] NoSQL Databases
   - MongoDB, Redis
+- [ ] Issue Tracking
+  - Confluence, Redmine, Trac, Mantis
 - [ ] Email or messenger tools to receive or subscribe notifications and alerts
   - Postfix, Dovecot
   - Slack, Hipchat, Rocket.Chat
