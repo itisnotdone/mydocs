@@ -1,0 +1,5 @@
+- https://en.wikipedia.org/wiki/Active_Directory
+- https://tools.ietf.org/html/rfc2247
+- https://tools.ietf.org/html/rfc1779
+- https://www.openldap.org/
+- http://directory.apache.org/apacheds/
