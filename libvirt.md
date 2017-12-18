@@ -58,3 +58,5 @@ cat BRIDGE_NAME.xml
 - The last portgroup that has no VLAN tagged defines the root bridge of the fake bridges which is a trunk
 - ```<mtu size='SIZE'/>``` must be set if you use a specific mtu value for the network.
   - This element will be disappeared after the network definition, 'virsh net-define BRIDGE_NAME.xml'.
+  - Being disappeared might be a bug. Report it if you want to
+    - https://bugzilla.redhat.com/enter_bug.cgi?product=Virtualization%20Tools&component=libvirt
