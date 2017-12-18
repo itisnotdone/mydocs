@@ -1,6 +1,8 @@
 # libvirt
 ## Network Definition
+```bash
 cat BRIDGE_NAME.xml
+```
 ```xml
 <network>
   <name>BRIDGE_NAME</name>
