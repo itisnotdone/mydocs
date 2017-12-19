@@ -45,8 +45,8 @@ should not be confused with the key passphrase, which is a separate feature.
 - Also contains OCSP URI
 - https://www.tbs-certificates.co.uk/FAQ/en/453.html
 
-## CRL vs OCSP vs OCSP stapling
-- OCSP stapling > OCSP > CRL
+## CRL, OCSP and OCSP stapling
+- For TLS client, OCSP stapling is better than OCSP which is better than CRL.
 - https://www.fir3net.com/Security/Concepts-and-Terminology/certificate-revocation.html
 
 ## Reference
@@ -71,3 +71,15 @@ should not be confused with the key passphrase, which is a separate feature.
   - https://www.openssl.org/docs/manmaster/man5/x509v3_config.html
 - Cryptography of SSH
   - https://www.mnin.org/write/2006_sshcrypto.html
+
+## Other solutions
+- http://pki.fedoraproject.org/wiki/PKI_Main_Page
+  - Called 'Dogtag'
+  - Mainly written in Java
+  - Utilize 389-ds(Directory Service) as its storage
+  - Seems mostly available on Redhat Linux
+  - Being considered as secret store by Barbican which is one of Openstack projects
+    - https://developer.openstack.org/api-guide/key-manager/dogtag_setup.html
+- https://www.ejbca.org/
+- https://www.openca.org/
+  - Seems mostly available on Redhat Linux
