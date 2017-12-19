@@ -25,6 +25,8 @@
 ## Setup services using containers
 - [ ] Baremetal provisioner
   - MAAS, Foreman
+- [ ] PKI
+  - Openssl, Dogtag
 - [ ] Directory service
   - LDAP, Active Directory
 - [ ] Package repository
