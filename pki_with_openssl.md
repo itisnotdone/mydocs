@@ -82,6 +82,7 @@ should not be confused with the key passphrase, which is a separate feature.
 - Firefox
   - Firefox does not work with OCSP stapling emitting "SEC_ERROR_OCSP_BAD_SIGNATURE"
   - With OCSP responder, it works fine
+  - https://wiki.mozilla.org/CA:ImprovingRevocation
 
 ## Other solutions
 - http://pki.fedoraproject.org/wiki/PKI_Main_Page
