@@ -48,6 +48,8 @@ should not be confused with the key passphrase, which is a separate feature.
 ## CRL, OCSP and OCSP stapling
 - For TLS client, OCSP stapling is better than OCSP which is better than CRL.
 - https://www.fir3net.com/Security/Concepts-and-Terminology/certificate-revocation.html
+- Enabling OCSP stapling is not normal. Most of well-known WEB services do not enable it.
+- https://arstechnica.com/information-technology/2017/07/https-certificate-revocation-is-broken-and-its-time-for-some-new-tools/
 
 ## Reference
 - https://help.ubuntu.com/lts/serverguide/certificates-and-security.html
@@ -71,6 +73,15 @@ should not be confused with the key passphrase, which is a separate feature.
   - https://www.openssl.org/docs/manmaster/man5/x509v3_config.html
 - Cryptography of SSH
   - https://www.mnin.org/write/2006_sshcrypto.html
+
+## Browsers
+- Google Chrome
+  - Chrome seems to use their own way called 'CRLsets' that pushes sets of revocation list contributed by CAs
+    - https://scotthelme.co.uk/certificate-revocation-google-chrome/
+    - https://www.imperialviolet.org/2012/02/05/crlsets.html
+- Firefox
+  - Firefox does not work with OCSP stapling emitting "SEC_ERROR_OCSP_BAD_SIGNATURE"
+  - With OCSP responder, it works fine
 
 ## Other solutions
 - http://pki.fedoraproject.org/wiki/PKI_Main_Page
