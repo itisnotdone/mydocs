@@ -61,10 +61,10 @@ should not be confused with the key passphrase, which is a separate feature.
   - With OCSP responder, it works fine
   - https://wiki.mozilla.org/CA:ImprovingRevocation
 
-- Automatic Certificate Management Environment (ACME)
-  - https://httpd.apache.org/docs/trunk/mod/mod_md.html#mdcertificateagreement
-  - https://letsencrypt.org/2017/10/17/acme-support-in-apache-httpd.html
-  - https://datatracker.ietf.org/doc/draft-ietf-acme-acme/
+## Automatic Certificate Management Environment (ACME)
+- https://httpd.apache.org/docs/trunk/mod/mod_md.html#mdcertificateagreement
+- https://letsencrypt.org/2017/10/17/acme-support-in-apache-httpd.html
+- https://datatracker.ietf.org/doc/draft-ietf-acme-acme/
 
 ## Reference
 - https://help.ubuntu.com/lts/serverguide/certificates-and-security.html
