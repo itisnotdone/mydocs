@@ -67,6 +67,7 @@ should not be confused with the key passphrase, which is a separate feature.
 - Both work fine with private PKI if you deploy the certificates properly.
   - Root CA certificates for the operating systems and browsers
   - Site certificates, private keys and intermediate CA certificates for the HTTP servers
+  - It is not mandatory to prepare CRL and OCSP responder to keep your service up and running as of now due to 'soft-fail'.
 
 ## Automatic Certificate Management Environment (ACME)
 - https://httpd.apache.org/docs/trunk/mod/mod_md.html#mdcertificateagreement
