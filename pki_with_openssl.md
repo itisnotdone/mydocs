@@ -52,14 +52,21 @@ should not be confused with the key passphrase, which is a separate feature.
 - https://arstechnica.com/information-technology/2017/07/https-certificate-revocation-is-broken-and-its-time-for-some-new-tools/
 
 ## Browsers
+- Soft-fail
+  - "The browser will try to do a revocation check, but if the response doesn't come back, or doesn't come back in a short period of time, the browser will simply forget about it. Even is worse is that Chrome doesn't even do revocation checks, at all."
+- Chrome and Firefox both have their own mechanisms that push sets of revocation list contributed by CAs
 - Google Chrome
-  - Chrome seems to use their own way called 'CRLsets' that pushes sets of revocation list contributed by CAs
+  - Uses 'CRLsets', Soft-fail
     - https://scotthelme.co.uk/certificate-revocation-google-chrome/
     - https://www.imperialviolet.org/2012/02/05/crlsets.html
 - Firefox
+  - Uses 'OneCRL', Soft-fail
   - Firefox does not work with OCSP stapling emitting "SEC_ERROR_OCSP_BAD_SIGNATURE"
-  - With OCSP responder, it works fine
+  - With just OCSP responder, it works fine
   - https://wiki.mozilla.org/CA:ImprovingRevocation
+- Both work fine with private PKI if you deploy the certificates properly.
+  - Root CA certificates for the operating systems and browsers
+  - Site certificates, private keys and intermediate CA certificates for the HTTP servers
 
 ## Automatic Certificate Management Environment (ACME)
 - https://httpd.apache.org/docs/trunk/mod/mod_md.html#mdcertificateagreement
