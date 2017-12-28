@@ -27,3 +27,6 @@
 
 - 12 Factors
   - https://12factor.net/
+
+- Edge Computing
+  - https://www.networkworld.com/article/3224893/internet-of-things/what-is-edge-computing-and-how-it-s-changing-the-network.html
