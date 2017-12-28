@@ -24,3 +24,6 @@
 - Dogtag PKI server
   - http://pki.fedoraproject.org/wiki/PKI_Main_Page
   - https://developer.openstack.org/api-guide/key-manager/dogtag_setup.html
+
+- 12 Factors
+  - https://12factor.net/
