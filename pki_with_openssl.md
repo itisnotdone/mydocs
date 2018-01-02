@@ -64,6 +64,9 @@ should not be confused with the key passphrase, which is a separate feature.
   - Firefox does not work with OCSP stapling emitting "SEC_ERROR_OCSP_BAD_SIGNATURE"
   - With just OCSP responder, it works fine
   - https://wiki.mozilla.org/CA:ImprovingRevocation
+    - OCSP responders are not yet reliable enough for us to do hard fail
+    - Websites that implement OCSP Must-Staple will get Hard Fail Revocation.
+    - As of Firefox 24, the user-interface for importing CRLs via Firefox has been removed. Auto-importing/updating of CRLs through Firefox has also been removed. NSS still supports CRLs, but Firefox is moving away from checking CRLs, and moving towards using a revocation list push mechanism.
 - Both work fine with private PKI if you deploy the certificates properly.
   - Root CA certificates for the operating systems and browsers
   - Site certificates, private keys and intermediate CA certificates for the HTTP servers
