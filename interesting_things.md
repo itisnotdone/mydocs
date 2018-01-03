@@ -32,5 +32,5 @@
   - https://www.networkworld.com/article/3224893/internet-of-things/what-is-edge-computing-and-how-it-s-changing-the-network.html
 
 - Netplan
-  - The new way defining network configuration on Ubuntu Bionic
+  - A new way of defining network configuration on Ubuntu Bionic
   - https://insights.ubuntu.com/2017/12/01/ubuntu-bionic-netplan/
