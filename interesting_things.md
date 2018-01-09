@@ -34,3 +34,6 @@
 - Netplan
   - A new way of defining network configuration on Ubuntu Bionic
   - https://insights.ubuntu.com/2017/12/01/ubuntu-bionic-netplan/
+
+- Ruby library for hash
+  - https://github.com/intridea/hashie
