@@ -1,0 +1,8 @@
+- Diskless bare-metal provision with MAAS
+  - https://bugs.launchpad.net/maas/+bug/1341699
+- Ceph cluster initialization
+  - Make a cluster with a server that has a pool with a replica
+  - Provision a new node with diskless configuration and add it to the ceph cluter
+  - Add as many nodes as you have, increasing the replica as you want
+- Provision virtualization and containerization solutions on the nodes configuring them to use ceph as their storage backend.
+  - Solutions such as Libvirt, LXD and Kubernetes
