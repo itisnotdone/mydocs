@@ -1,14 +1,6 @@
-
-- 
+# How to setup workstation
 
 ```bash
-git_user=
-git_email=
-hostname=
-ip=
-user=
-
-
 # package update and upgrade
 sudo apt update && sudo apt full-upgrade -y
 
@@ -17,13 +9,14 @@ sudo apt install -y lxd-client libvirt-dev libvirt-bin git tree byobu
 sudo reboot
 
 # byobu setting
+mkdir ~/.byobu
 echo "set-option -g history-limit 100000" | tee -a ~/.byobu/.tmux.conf
 
 # vi
 # https://github.com/itisnotdone/mydotfile.git
 
 # git config
-git config --global user.email "donoldfashioned@gmail.com"                                                                                                                                                                                                                              
+git config --global user.email "donoldfashioned@gmail.com"
 git config --global user.name "Don Draper"
 
 # chefdk
@@ -36,7 +29,7 @@ fi
 
 sudo apt install -y chefdk
 # or sudo apt install -y chefdk=VERSION
-chef verify
+
 echo '' | tee -a ~/.bashrc
 echo 'eval "$(chef shell-init bash)"' | tee -a ~/.bashrc
 # logout and in
