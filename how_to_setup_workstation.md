@@ -28,7 +28,7 @@ sudo apt update
 fi
 
 sudo apt install -y chefdk
-# or sudo apt install -y chefdk=VERSION
+# or sudo apt install -y chefdk=1.6.11-1
 
 echo '' | tee -a ~/.bashrc
 echo 'eval "$(chef shell-init bash)"' | tee -a ~/.bashrc
