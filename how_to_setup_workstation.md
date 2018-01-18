@@ -45,12 +45,11 @@ virsh net-undefine default
 export PKG_CONFIG_PATH=/usr/lib/x86_64-linux-gnu/pkgconfig
 mkdir temp; cd temp
 kitchen init -D kitchen-gogetkitchen -P chef_zero
-cd -
+cd -; rm -r temp;
 # This will install necessary gem packges depending on the driver
 
-rm -rf .kitchen.yml chefignore test/integration/default
-cd /home/ubuntu/.chefdk/gem/ruby/*/gems
 
+cd /home/ubuntu/.chefdk/gem/ruby/*/gems
 for APP in maas-client gogetit kitchen-gogetkitchen; do \
 git clone https://github.com/itisnotdone/$APP.git; \
 rm -rf $APP-*; \
