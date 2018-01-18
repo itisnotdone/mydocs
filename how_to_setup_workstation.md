@@ -38,7 +38,7 @@ echo 'eval "$(chef shell-init bash)"' | tee -a ~/.bashrc
 
 
 # destroy default network for libvirt
-virsh net-destroy default
+# virsh net-destroy default
 virsh net-undefine default
 
 # https://github.com/itisnotdone/kitchen-gogetkitchen
