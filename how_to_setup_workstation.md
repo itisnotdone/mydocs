@@ -27,8 +27,10 @@ echo "deb [arch=amd64] http://packages.chef.io/repos/apt/stable xenial main" | s
 sudo apt update
 fi
 
-sudo apt install -y chefdk
-# or sudo apt install -y chefdk=1.6.11-1
+# https://github.com/chef/chef-dk/pull/1316#issuecomment-313738278
+# sudo apt install -y chefdk
+sudo apt install -y chefdk=1.6.11-1
+sudo apt-mark hold chefdk
 
 echo '' | tee -a ~/.bashrc
 echo 'eval "$(chef shell-init bash)"' | tee -a ~/.bashrc
