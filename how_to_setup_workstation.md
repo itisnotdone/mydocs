@@ -43,7 +43,10 @@ virsh net-undefine default
 
 # https://github.com/itisnotdone/kitchen-gogetkitchen
 export PKG_CONFIG_PATH=/usr/lib/x86_64-linux-gnu/pkgconfig
+mkdir temp; cd temp
 kitchen init -D kitchen-gogetkitchen -P chef_zero
+cd -
+# This will install necessary gem packges depending on the driver
 
 rm -rf .kitchen.yml chefignore test/integration/default
 cd /home/ubuntu/.chefdk/gem/ruby/*/gems
