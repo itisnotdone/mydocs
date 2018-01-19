@@ -59,9 +59,12 @@ echo "  user = $git_user" >> $APP/.git/config; \
 echo "  mail = $git_email" >> $APP/.git/config; \
 done
 
+CHEF_HOME=~/dev
+mkdir $CHEF_HOME
 # clone cookbooks you are working on
+# copy .chef.tar.gz under $COOKBOOK_HOME
 
-# copy .chef.tar.gz under the chef-repo
+
 
 knife ssl check
 
