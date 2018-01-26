@@ -31,3 +31,8 @@ knife vault refresh $vault $item --clean-unknown-clients
 
 ## TODO
 - bootstrap using local proxy or mirror
+
+# Reference
+https://www.chef.io/
+https://docs.chef.io/
+https://discourse.chef.io/
