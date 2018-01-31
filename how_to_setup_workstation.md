@@ -2,14 +2,13 @@
 
 ```bash
 # package update and upgrade
-sudo apt update && sudo apt full-upgrade -y
-
-sudo apt install -y lxd-client libvirt-dev libvirt-bin git tree byobu
-
+sudo apt update && sudo apt full-upgrade -y && \
+sudo apt install -y lxd-client libvirt-dev libvirt-bin git tree byobu && \
 sudo reboot
+!ssh
 
 # byobu setting
-mkdir ~/.byobu
+mkdir ~/.byobu && \
 echo "set-option -g history-limit 100000" | tee -a ~/.byobu/.tmux.conf
 
 # vi
@@ -33,8 +32,7 @@ fi
 
 # https://github.com/chef/chef-dk/pull/1316#issuecomment-313738278
 # sudo apt install -y chefdk
-sudo apt install -y chefdk=1.6.11-1
-sudo apt-mark hold chefdk
+sudo apt install -y chefdk=1.6.11-1 && sudo apt-mark hold chefdk
 
 # https://github.com/chef/chef-dk
 echo '' | tee -a ~/.bashrc
@@ -42,17 +40,6 @@ echo 'eval "$(chef shell-init bash)"' | tee -a ~/.bashrc
 exit
 !ssh
 # logout and in
-
-# to install RVM
-# https://github.com/rvm/ubuntu_rvm
-sudo apt install software-properties-common
-sudo apt-add-repository -y ppa:rael-gc/rvm
-sudo apt update
-sudo apt install -y rvm
-echo | tee -a ~/.rvmrc; echo "rvm_silence_path_mismatch_check_flag=1" | tee -a ~/.rvmrc
-exit
-!ssh
-rvm info
 
 # destroy default network for libvirt
 # virsh net-destroy default
