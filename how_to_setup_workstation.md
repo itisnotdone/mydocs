@@ -36,6 +36,7 @@ fi
 sudo apt install -y chefdk=1.6.11-1
 sudo apt-mark hold chefdk
 
+# https://github.com/chef/chef-dk
 echo '' | tee -a ~/.bashrc
 echo 'eval "$(chef shell-init bash)"' | tee -a ~/.bashrc
 exit
@@ -43,6 +44,7 @@ exit
 # logout and in
 
 # to install RVM
+# https://github.com/rvm/ubuntu_rvm
 sudo apt install software-properties-common
 sudo apt-add-repository -y ppa:rael-gc/rvm
 sudo apt update
