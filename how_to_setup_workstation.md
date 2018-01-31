@@ -21,6 +21,7 @@ NAME="Don Draper"
 # git config
 git config --global user.email $EMAIL
 git config --global user.name $NAME
+git config --list | egrep 'email|name'
 
 # chefdk
 if [ ! -f /etc/apt/sources.list.d/chef-stable.list ]; then
@@ -41,6 +42,15 @@ exit
 !ssh
 # logout and in
 
+# to install RVM
+sudo apt install software-properties-common
+sudo apt-add-repository -y ppa:rael-gc/rvm
+sudo apt update
+sudo apt install -y rvm
+echo | tee -a ~/.rvmrc; echo "rvm_silence_path_mismatch_check_flag=1" | tee -a ~/.rvmrc
+exit
+!ssh
+rvm info
 
 # destroy default network for libvirt
 # virsh net-destroy default
