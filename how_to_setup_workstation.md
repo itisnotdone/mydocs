@@ -15,9 +15,12 @@ echo "set-option -g history-limit 100000" | tee -a ~/.byobu/.tmux.conf
 # vi
 # https://github.com/itisnotdone/mydotfile.git
 
+EMAIL="donoldfashioned@gmail.com"
+NAME="Don Draper"
+
 # git config
-git config --global user.email "donoldfashioned@gmail.com"
-git config --global user.name "Don Draper"
+git config --global user.email $EMAIL
+git config --global user.name $NAME
 
 # chefdk
 if [ ! -f /etc/apt/sources.list.d/chef-stable.list ]; then
@@ -55,15 +58,14 @@ git clone https://github.com/itisnotdone/$APP.git; \
 rm -rf $APP-*; \
 ln -s $PWD/$APP $PWD/$APP-`gem list | grep $APP | awk '{print $2}' | tr -d '()'`; \
 echo "[user]" >> $APP/.git/config; \
-echo "  user = $git_user" >> $APP/.git/config; \
-echo "  mail = $git_email" >> $APP/.git/config; \
+echo "  user = $NAME" >> $APP/.git/config; \
+echo "  mail = $EMAIL" >> $APP/.git/config; \
 done
 
 CHEF_HOME=~/dev
 mkdir $CHEF_HOME
 # clone cookbooks you are working on
 # copy .chef.tar.gz under $COOKBOOK_HOME
-
 
 
 knife ssl check
