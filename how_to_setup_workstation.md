@@ -37,6 +37,8 @@ sudo apt-mark hold chefdk
 
 echo '' | tee -a ~/.bashrc
 echo 'eval "$(chef shell-init bash)"' | tee -a ~/.bashrc
+exit
+!ssh
 # logout and in
 
 
