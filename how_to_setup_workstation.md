@@ -46,9 +46,8 @@ exit
 virsh net-undefine default
 
 # https://github.com/itisnotdone/kitchen-gogetkitchen
-export PKG_CONFIG_PATH=/usr/lib/x86_64-linux-gnu/pkgconfig
-mkdir temp; cd temp
-kitchen init -D kitchen-gogetkitchen -P chef_zero
+export PKG_CONFIG_PATH=/usr/lib/x86_64-linux-gnu/pkgconfig; \
+mkdir temp; cd temp; kitchen init -D kitchen-gogetkitchen -P chef_zero; \
 cd -; rm -r temp;
 # This will install necessary gem packges depending on the driver
 
