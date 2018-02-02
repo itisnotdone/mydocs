@@ -95,4 +95,6 @@ Please define default configuration for GoGetIt at ~/.gogetit/gogetit.yml.
 # https://github.com/chef/chef-dk/issues/603
 chef gem install knife-solo -v 0.7.0.pre
 
+chef gem install librarian-chef
+
 ```
