@@ -33,3 +33,39 @@ yum install -y net-tools openssh-lxc image list ubuntu-daily:server openssh-clie
 exit
 cp -av $UBUNTU_CONTAINER/templates/cloud-init-* $CENTOS_CONTAINER/templates/
 ```
+## How to create a custom image
+```bash
+lxc image delete $PREVIOUS_IMAGE
+
+# create a clean container with your favorite public image
+gogetit create default-image -a ubuntu-16.04
+
+ssh ubuntu@default-image
+
+sudo apt update && sudo apt full-upgrade -y && sudo apt autoremove -y && sudo apt install -y tree
+
+# install chef client
+wget -qO - https://packages.chef.io/chef.asc | sudo apt-key add -
+echo "deb https://nexus.aregion.org/repository/chef/repos/apt/stable xenial main" | sudo tee /etc/apt/sources.list.d/chef-stable.list
+sudo apt update && sudo apt install -y chef
+
+# https://bugs.launchpad.net/ubuntu/+source/apparmor/+bug/1575779/comments/12
+# hostnamectl matters when bootstrapping a chef node.
+sudo EDITOR=vi systemctl edit systemd-hostnamed.service
+
+# put following lines
+[Service]
+PrivateNetwork=no
+# and save it
+
+sudo systemctl daemon-reload && systemctl restart systemd-hostnamed.service
+time hostnamectl
+```
+
+
+
+
+
+
+
+
