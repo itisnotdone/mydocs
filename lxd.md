@@ -61,10 +61,14 @@ PrivateNetwork=no
 sudo systemctl daemon-reload && systemctl restart systemd-hostnamed.service
 time hostnamectl
 
-# for trusted ca certificates
+# else if needed
+# link system-wide ca certificates with embedded ruby
 EMBEDDED_RUBY_CA_CERTS=$(sudo /opt/chef/embedded/bin/ruby -ropenssl -e 'puts OpenSSL::X509::DEFAULT_CERT_FILE')
 sudo mv -v $EMBEDDED_RUBY_CA_CERTS "$EMBEDDED_RUBY_CA_CERTS"_bak
 sudo ln -s /etc/ssl/certs/ca-certificates.crt $EMBEDDED_RUBY_CA_CERTS
+
+# check system wide config file of embedded ruby. but this that file actually doesn't work
+sudo /opt/chef/embedded/bin/ruby -e 'puts Gem::ConfigFile::SYSTEM_WIDE_CONFIG_FILE'
 ```
 
 
