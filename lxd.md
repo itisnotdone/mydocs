@@ -35,12 +35,17 @@ cp -av $UBUNTU_CONTAINER/templates/cloud-init-* $CENTOS_CONTAINER/templates/
 ```
 ## How to create a custom image
 ```bash
-lxc image delete $PREVIOUS_IMAGE
+ORIGIN_CONTAINER="default-image"
+IMAGE_NAME="ubuntu-16.04-chef"
+lxc image delete $IMAGE_NAME
 
-# create a clean container with your favorite public image
-gogetit create default-image -a ubuntu-16.04
+if lxc list | grep $ORIGIN_CONTAINER; then \
+  lxc start $ORIGIN_CONTAINER; \
+else \
+  gogetit create $ORIGIN_CONTAINER -a ubuntu-16.04; \
+fi
 
-ssh ubuntu@default-image
+ssh ubuntu@$ORIGIN_CONTAINER
 
 sudo apt update && sudo apt full-upgrade -y && sudo apt autoremove -y && sudo apt install -y tree
 
@@ -69,6 +74,13 @@ sudo ln -s /etc/ssl/certs/ca-certificates.crt $EMBEDDED_RUBY_CA_CERTS
 
 # check system wide config file of embedded ruby. but this that file actually doesn't work
 sudo /opt/chef/embedded/bin/ruby -e 'puts Gem::ConfigFile::SYSTEM_WIDE_CONFIG_FILE'
+
+# https://github.com/itisnotdone/mydotfile
+exit
+
+lxc stop $ORIGIN_CONTAINER
+
+lxc publish --debug --verbose $ORIGIN_CONTAINER --alias $IMAGE_NAME
 ```
 
 
