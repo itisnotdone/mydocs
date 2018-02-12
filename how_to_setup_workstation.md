@@ -101,4 +101,6 @@ Please define default configuration for GoGetIt at ~/.gogetit/gogetit.yml.
 chef gem install chef-zero
 chef gem install knife-zero
 
+# to set default editor
+echo > .chef/knife.rb; echo "knife[:editor] = 'vi'" > .chef/knife.rb
 ```
