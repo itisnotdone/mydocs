@@ -51,16 +51,27 @@ mkdir temp; cd temp; kitchen init -D kitchen-gogetkitchen -P chef_zero; \
 cd -; rm -r temp;
 # This will install necessary gem packges depending on the driver
 
+gogetit list
 
-cd /home/ubuntu/.chefdk/gem/ruby/*/gems
-for APP in maas-client gogetit kitchen-gogetkitchen; do \
-git clone https://github.com/itisnotdone/$APP.git; \
-rm -rf $APP-*; \
-ln -s $PWD/$APP $PWD/$APP-`gem list | grep $APP | awk '{print $2}' | tr -d '()'`; \
-echo "[user]" >> $APP/.git/config; \
-echo "  user = $NAME" >> $APP/.git/config; \
-echo "  mail = $EMAIL" >> $APP/.git/config; \
-done
+# about activesupport dependency
+# change following lines
+/home/ubuntu/.chefdk/gem/ruby/2.4.0/gems/hyperkit-1.1.0/hyperkit.gemspec | grep activesupport
+/home/ubuntu/.chefdk/gem/ruby/2.4.0/specifications/hyperkit-1.1.0.gemspec | grep activesupport
+vi
+:%s/4.2.6/5.1.4/gc
+# go to a project
+kitchen status
+
+
+## cd /home/ubuntu/.chefdk/gem/ruby/*/gems
+## for APP in maas-client gogetit kitchen-gogetkitchen; do \
+## git clone https://github.com/itisnotdone/$APP.git; \
+## rm -rf $APP-*; \
+## ln -s $PWD/$APP $PWD/$APP-`gem list | grep $APP | awk '{print $2}' | tr -d '()'`; \
+## echo "[user]" >> $APP/.git/config; \
+## echo "  user = $NAME" >> $APP/.git/config; \
+## echo "  mail = $EMAIL" >> $APP/.git/config; \
+## done
 
 CHEF_HOME=~/dev
 mkdir $CHEF_HOME
