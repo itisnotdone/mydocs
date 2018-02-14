@@ -41,6 +41,11 @@ end
 - bootstrap using local proxy or mirror
 
 # Reference
-https://www.chef.io/
-https://docs.chef.io/
-https://discourse.chef.io/
+- chef
+  - https://www.chef.io/
+  - https://docs.chef.io/
+  - https://discourse.chef.io/
+- zero
+  - http://knife-zero.github.io/20_getting_started/
+- vault
+  - https://blog.chef.io/2016/01/21/chef-vault-what-is-it-and-what-can-it-do-for-you/

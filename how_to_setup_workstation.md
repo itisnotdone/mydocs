@@ -62,25 +62,6 @@ vi
 # go to a project
 kitchen status
 
-
-## cd /home/ubuntu/.chefdk/gem/ruby/*/gems
-## for APP in maas-client gogetit kitchen-gogetkitchen; do \
-## git clone https://github.com/itisnotdone/$APP.git; \
-## rm -rf $APP-*; \
-## ln -s $PWD/$APP $PWD/$APP-`gem list | grep $APP | awk '{print $2}' | tr -d '()'`; \
-## echo "[user]" >> $APP/.git/config; \
-## echo "  user = $NAME" >> $APP/.git/config; \
-## echo "  mail = $EMAIL" >> $APP/.git/config; \
-## done
-
-CHEF_HOME=~/dev
-mkdir $CHEF_HOME
-# clone cookbooks you are working on
-# copy .chef.tar.gz under $COOKBOOK_HOME
-
-
-knife ssl check
-
 # ssh configuration
 echo "StrictHostKeyChecking no" | sudo tee -a /etc/ssh/ssh_config
 echo "UserKnownHostsFile=/dev/null" | sudo tee -a /etc/ssh/ssh_config
@@ -98,20 +79,9 @@ ssh $user@$ip id
 virsh -c qemu+ssh://$user@$ip/system list
 
 
-gogetit list
-Please define default configuration for GoGetIt at ~/.gogetit/gogetit.yml.
-
-# knife solo
-# https://matschaffer.github.io/knife-solo/
-# https://github.com/chef/chef-dk/issues/603
-# chef gem install knife-solo -v 0.7.0.pre
-# chef gem install librarian-chef
-
-# chef zero
-# http://knife-zero.github.io/20_getting_started/
-chef gem install chef-zero
 chef gem install knife-zero
-
 # to set default editor
 echo > .chef/knife.rb; echo "knife[:editor] = 'vi'" > .chef/knife.rb
+knife ssl check
+
 ```
