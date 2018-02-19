@@ -81,7 +81,10 @@ virsh -c qemu+ssh://$user@$ip/system list
 
 chef gem install knife-zero
 # to set default editor
-echo > .chef/knife.rb; echo "knife[:editor] = 'vi'" > .chef/knife.rb
+echo > .chef/knife.rb
+echo "knife[:editor] = 'vi'" > .chef/knife.rb
+echo "knife[:vault_mode] = 'client'" > .chef/knife.rb
+echo "knife[:vault_admins] = [ 'your_admin_account_name' ]" > .chef/knife.rb
 knife ssl check
 
 ```
