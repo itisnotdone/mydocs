@@ -54,6 +54,10 @@ wget -qO - https://packages.chef.io/chef.asc | sudo apt-key add -
 echo "deb https://nexus.aregion.org/repository/chef/repos/apt/stable xenial main" | sudo tee /etc/apt/sources.list.d/chef-stable.list
 sudo apt update && sudo apt install -y chef
 
+# to make embedded chef refer your custom repo
+/opt/chef/embedded/bin/gem sources --remove https://rubygems.org/
+/opt/chef/embedded/bin/gem sources --add https://nexus.aregion/repository/rubygems/
+
 # https://bugs.launchpad.net/ubuntu/+source/apparmor/+bug/1575779/comments/12
 # hostnamectl matters when bootstrapping a chef node.
 sudo EDITOR=vi systemctl edit systemd-hostnamed.service
