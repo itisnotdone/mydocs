@@ -52,3 +52,5 @@ end
   - https://blog.chef.io/2016/01/21/chef-vault-what-is-it-and-what-can-it-do-for-you/
 - Policyfile
   - https://yolover.poise.io/
+- Kitchen
+  - https://kitchen.ci/
