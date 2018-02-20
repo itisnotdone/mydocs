@@ -54,3 +54,5 @@ end
   - https://yolover.poise.io/
 - Kitchen
   - https://kitchen.ci/
+- Debugging
+  - https://github.com/chrisgit/chef-debugging/blob/master/pry_cookbook_debugging/README.md
