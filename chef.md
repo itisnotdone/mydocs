@@ -45,6 +45,7 @@ end
   - https://www.chef.io/
   - https://docs.chef.io/
   - https://discourse.chef.io/
+  - https://docs.chef.io/chef_deprecations_client.html
 - Zero
   - http://knife-zero.github.io/20_getting_started/
 - Vault
