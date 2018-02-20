@@ -54,10 +54,6 @@ wget -qO - https://packages.chef.io/chef.asc | sudo apt-key add -
 echo "deb https://nexus.aregion.org/repository/chef/repos/apt/stable xenial main" | sudo tee /etc/apt/sources.list.d/chef-stable.list
 sudo apt update && sudo apt install -y chef
 
-# to make embedded chef refer your custom repo
-/opt/chef/embedded/bin/gem sources --remove https://rubygems.org/
-/opt/chef/embedded/bin/gem sources --add https://nexus.aregion/repository/rubygems/
-
 # https://bugs.launchpad.net/ubuntu/+source/apparmor/+bug/1575779/comments/12
 # hostnamectl matters when bootstrapping a chef node.
 sudo EDITOR=vi systemctl edit systemd-hostnamed.service
@@ -76,8 +72,12 @@ EMBEDDED_RUBY_CA_CERTS=$(sudo /opt/chef/embedded/bin/ruby -ropenssl -e 'puts Ope
 sudo mv -v $EMBEDDED_RUBY_CA_CERTS "$EMBEDDED_RUBY_CA_CERTS"_bak
 sudo ln -s /etc/ssl/certs/ca-certificates.crt $EMBEDDED_RUBY_CA_CERTS
 
-# check system wide config file of embedded ruby. but this that file actually doesn't work
-sudo /opt/chef/embedded/bin/ruby -e 'puts Gem::ConfigFile::SYSTEM_WIDE_CONFIG_FILE'
+# to make embedded chef refer your custom repo
+/opt/chef/embedded/bin/gem sources --remove https://rubygems.org/
+/opt/chef/embedded/bin/gem sources --add https://nexus.aregion/repository/rubygems/
+
+# check system wide config file of embedded ruby. but actually this doesn't work
+# sudo /opt/chef/embedded/bin/ruby -e 'puts Gem::ConfigFile::SYSTEM_WIDE_CONFIG_FILE'
 
 # https://github.com/itisnotdone/mydotfile
 exit
