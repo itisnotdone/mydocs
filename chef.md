@@ -29,6 +29,7 @@ knife vault create $vault $item --json /path/to/the/item.json -A 'user_a,user_b,
 knife vault refresh $vault $item --clean-unknown-clients
 ```
 ## How to 'chef_gem' with proxy
+```ruby
 chef_gem 'maas-client' do
   clear_sources             true
   include_default_source    true
@@ -36,6 +37,15 @@ chef_gem 'maas-client' do
   source                    'https://nexus.aregion.org/repository/rubygems-proxy/'
   action                    :install
 end
+```
+
+## How to debug
+```bash
+kitchen login
+cd /tmp/kitchen
+vi cookbook_artifacts/$FIND_THE_RECIPE_AND_ADD_PRY
+chef-client -z -j dna.json -c client.rb
+```
 
 ## TODO
 - bootstrap using local proxy or mirror
