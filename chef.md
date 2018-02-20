@@ -41,11 +41,13 @@ end
 - bootstrap using local proxy or mirror
 
 # Reference
-- chef
+- Chef
   - https://www.chef.io/
   - https://docs.chef.io/
   - https://discourse.chef.io/
-- zero
+- Zero
   - http://knife-zero.github.io/20_getting_started/
-- vault
+- Vault
   - https://blog.chef.io/2016/01/21/chef-vault-what-is-it-and-what-can-it-do-for-you/
+- Policyfile
+  - https://yolover.poise.io/
