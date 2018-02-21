@@ -75,6 +75,7 @@ sudo ln -s /etc/ssl/certs/ca-certificates.crt $EMBEDDED_RUBY_CA_CERTS
 # to make embedded chef refer your custom repo
 /opt/chef/embedded/bin/gem sources --remove https://rubygems.org/
 /opt/chef/embedded/bin/gem sources --add https://nexus.aregion/repository/rubygems/
+/opt/chef/embedded/bin/gem sources
 
 # check system wide config file of embedded ruby. but actually this doesn't work
 # sudo /opt/chef/embedded/bin/ruby -e 'puts Gem::ConfigFile::SYSTEM_WIDE_CONFIG_FILE'
