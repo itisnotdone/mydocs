@@ -66,3 +66,8 @@ chef-client -z -j dna.json -c client.rb
   - https://kitchen.ci/
 - Debugging
   - https://github.com/chrisgit/chef-debugging/blob/master/pry_cookbook_debugging/README.md
+- Provisioning
+  - https://docs.chef.io/provisioning.html
+  - https://github.com/chef/chef-provisioning
+  - https://github.com/chef/chef-provisioning/wiki/Driver-Development
+  - https://github.com/chef/chef-provisioning/wiki/Configuration
