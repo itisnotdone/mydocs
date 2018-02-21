@@ -33,10 +33,6 @@ fi
 # https://github.com/chef/chef-dk/pull/1316#issuecomment-313738278
 sudo apt install -y chefdk
 # to make embedded chef refer your custom repo
-/opt/chef/embedded/bin/gem sources
-/opt/chef/embedded/bin/gem sources --remove https://rubygems.org/
-/opt/chef/embedded/bin/gem sources --add https://nexus.aregion/repository/rubygems/
-/opt/chef/embedded/bin/gem sources
 
 chef gem install knife-zero
 
