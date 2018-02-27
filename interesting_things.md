@@ -37,3 +37,9 @@
 
 - Ruby library for hash
   - https://github.com/intridea/hashie
+
+- Trello Cronofy
+  - https://trello.cronofy.com/
+  - To frequently sync between cards and calendars
+  - Integration with Trello's iCalendar does not sync the calendar frequently
+  - It's free for only one board
