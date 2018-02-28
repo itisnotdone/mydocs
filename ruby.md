@@ -1,5 +1,5 @@
 # Install RVM.
-```bash
+```sh
 # https://rvm.io/rvm/install
 echo progress-bar >> ~/.curlrc && curl -sSL https://get.rvm.io | bash
 

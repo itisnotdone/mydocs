@@ -1,7 +1,7 @@
 # LXD
 
 ## Commands
-```bash
+```sh
 lxc remote list
 
 lxc image list images:
@@ -23,7 +23,7 @@ lxc remote add lxd01 lxd01.aregion.org --accept-certificate
 ```
 
 ## Initialize a CentOS image
-```bash
+```sh
 lxc exec CONTAINER_NAME bash
 rpm -ivh http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 yum update -y
@@ -34,7 +34,7 @@ exit
 cp -av $UBUNTU_CONTAINER/templates/cloud-init-* $CENTOS_CONTAINER/templates/
 ```
 ## How to create a custom image
-```bash
+```sh
 ORIGIN_CONTAINER="default-image"
 IMAGE_NAME="ubuntu-16.04-chef"
 lxc image delete $IMAGE_NAME
@@ -87,11 +87,3 @@ lxc stop $ORIGIN_CONTAINER
 
 lxc publish --debug --verbose $ORIGIN_CONTAINER --alias $IMAGE_NAME
 ```
-
-
-
-
-
-
-
-

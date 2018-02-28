@@ -1,6 +1,6 @@
 ## How to use knife-solo
 
-```bash
+```sh
 gogetit create solo01
 
 knife solo init $somewhere

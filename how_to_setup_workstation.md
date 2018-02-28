@@ -1,6 +1,6 @@
 # How to setup workstation
 
-```bash
+```sh
 # package update and upgrade
 sudo apt update && sudo apt full-upgrade -y && \
 sudo apt install -y lxd-client libvirt-dev libvirt-bin git tree byobu && \

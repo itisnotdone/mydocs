@@ -17,7 +17,7 @@ When a server needs to route packets to a specific client(destination), the rout
 - Destination: the IP addresse or CIDR of the clients
 
 
-```bash
+```sh
 #!/bin/bash
 
 VID=117

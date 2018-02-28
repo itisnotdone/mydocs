@@ -2,7 +2,7 @@
 - vi
 
 
-```bash
+```sh
 # sudoers
 echo "don ALL=(ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/don
 
@@ -103,9 +103,5 @@ for VID in 11 12 13 14 15; do sudo ovs-vsctl add-br bra-$VID bra $VID; done
 sudo ovs-vsctl show
 
 ```
-
-
-
-
 
 
