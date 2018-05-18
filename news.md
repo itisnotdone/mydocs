@@ -9,3 +9,5 @@ https://feedly.com/i/my
   - https://docs.chef.io/chef_deprecations_client.html
 - Openstack
 - SDN
+- Go
+  - https://blog.golang.org/

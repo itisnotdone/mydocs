@@ -43,3 +43,6 @@
   - To frequently sync between cards and calendars
   - Integration with Trello's iCalendar does not sync the calendar frequently
   - It's free for only one board
+
+- Explicit Versioning
+  - https://medium.com/sapioit/why-having-3-numbers-in-the-version-name-is-bad-92fc1f6bc73c

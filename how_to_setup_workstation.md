@@ -92,4 +92,24 @@ echo "knife[:vault_mode] = 'client'" >> .chef/knife.rb
 echo "knife[:vault_admins] = [ 'your_admin_account_name' ]" >> .chef/knife.rb
 knife ssl check
 
+# for GO Env
+sudo add-apt-repository -y ppa:gophers/archive
+sudo apt update
+sudo apt install -y golang-1.10-go
+
+export GOPATH=$HOME/go
+export GOBIN=$HOME/go/bin
+export PATH=$PATH:$GOBIN
+
+cat << EOF >> ~/.bashrc
+
+export GOPATH=\$HOME/go
+export GOBIN=\$HOME/go/bin
+export PATH=$PATH:$GOBIN:/usr/lib/go-1.10/bin
+EOF
+
+cd $GOPATH
+go get -u github.com/motemen/gore
+go get -u github.com/d4l3k/go-pry
+go get -u github.com/nsf/gocode
 ```
