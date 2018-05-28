@@ -55,6 +55,8 @@ cd -; rm -r temp;
 
 gogetit list
 
+# Copy your source repository
+
 # about activesupport dependency
 # change following lines
 /home/ubuntu/.chefdk/gem/ruby/2.4.0/gems/hyperkit-1.1.0/hyperkit.gemspec | grep activesupport
@@ -105,11 +107,12 @@ cat << EOF >> ~/.bashrc
 
 export GOPATH=\$HOME/go
 export GOBIN=\$HOME/go/bin
-export PATH=$PATH:$GOBIN:/usr/lib/go-1.10/bin
+export PATH=\$PATH:\$GOBIN:/usr/lib/go-1.10/bin
 EOF
 
 cd $GOPATH
 go get -u github.com/motemen/gore
 go get -u github.com/d4l3k/go-pry
 go get -u github.com/nsf/gocode
+go get -u github.com/itisnotdone/easeovs
 ```
