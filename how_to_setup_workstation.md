@@ -115,4 +115,5 @@ go get -u github.com/motemen/gore
 go get -u github.com/d4l3k/go-pry
 go get -u github.com/nsf/gocode
 go get -u github.com/itisnotdone/easeovs
+go get -u github.com/itisnotdone/gostudy
 ```
