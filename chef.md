@@ -56,6 +56,8 @@ chef-client -z -j dna.json -c client.rb
   - https://docs.chef.io/
   - https://discourse.chef.io/
   - https://docs.chef.io/chef_deprecations_client.html
+- chef-client local mode
+  - https://medium.com/@emachnic/using-policyfiles-with-chef-client-local-mode-4f47477b24db
 - Zero
   - http://knife-zero.github.io/20_getting_started/
 - Vault
