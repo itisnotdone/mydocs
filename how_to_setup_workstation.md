@@ -109,6 +109,7 @@ export GOPATH=\$HOME/go
 export GOBIN=\$HOME/go/bin
 export PATH=\$PATH:\$GOBIN:/usr/lib/go-1.10/bin
 EOF
+exit
 
 cd $GOPATH
 go get -u github.com/motemen/gore
