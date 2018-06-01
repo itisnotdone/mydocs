@@ -1,3 +1,28 @@
+## How to install chef-server
+```bash
+sudo apt-get install apt-transport-https
+wget -qO - https://packages.chef.io/chef.asc | sudo apt-key add -
+echo "deb [arch=amd64] http://repo/chef/repos/apt/stable xenial main" | sudo tee /etc/apt/sources.list.d/chef-stable.list
+sudo apt update
+
+sudo apt install -y chef-server-core
+sudo chef-server-ctl reconfigure
+
+sudo apt install -y chef-manage
+sudo chef-server-ctl reconfigure
+sudo chef-manage-ctl reconfigure --accept-license
+
+sudo apt install -y opscode-push-jobs-server
+sudo chef-server-ctl reconfigure
+sudo opscode-push-jobs-server-ctl reconfigure
+
+sudo apt install -y opscode-reporting
+sudo chef-server-ctl reconfigure
+sudo opscode-reporting-ctl reconfigure --accept-license
+
+```
+
+
 ## How to use knife-solo
 
 ```sh
@@ -28,6 +53,7 @@ knife vault create $vault $item --json /path/to/the/item.json -A 'user_a,user_b,
 # to refresh key pairs if there are some news
 knife vault refresh $vault $item --clean-unknown-clients
 ```
+
 ## How to 'chef_gem' with proxy
 ```ruby
 chef_gem 'maas-client' do
