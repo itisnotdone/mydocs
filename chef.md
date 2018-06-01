@@ -43,6 +43,39 @@ vi nodes/solo01.json
 knife solo cook ubuntu@solo01
 ```
 
+## 'chef-client' with local mode
+```bash
+## time to work on zero!!
+chef generate app demoApp
+cd demoApp
+chef-client -z
+knife node list -z
+knife node show -z $HOSTNAME
+
+cd cookbooks/demoApp
+# edit metadata.rb and recipes/default.rb
+knife node run_list add -z $HOSTNAME demoApp
+sudo chef-client -z
+```
+## 'chef-client', 'local mode' and 'policy'
+```bash
+# to work with policy
+# export artifacts as tar.gz
+COOKBOOK_NAME=cook01
+cd $COOKBOOK_NAME
+chef export -a ../$COOKBOOK_NAME.tar.gz
+scp ../$COOKBOOK_NAME.tar.gz $SOMEWHERE_YOU_WANT
+
+# go to the node to run in local mode
+mkdir $COOKBOOK_NAME
+# get the tar.gz artifacts by copying
+tar zxvf $COOKBOOK_NAME.tar.gz -C $COOKBOOK_NAME
+cd $COOKBOOK_NAME
+# follow instructions here
+# http://knife-zero.github.io/tips/with_policyfile/
+chef-client -z
+```
+
 ## How to use knife-vault
 ```bash
 # to create a new vault
@@ -88,6 +121,7 @@ chef-client -z -j dna.json -c client.rb
   - https://medium.com/@emachnic/using-policyfiles-with-chef-client-local-mode-4f47477b24db
 - Zero
   - http://knife-zero.github.io/20_getting_started/
+  - http://knife-zero.github.io/tips/with_policyfile/
 - Vault
   - https://blog.chef.io/2016/01/21/chef-vault-what-is-it-and-what-can-it-do-for-you/
 - Policyfile
