@@ -20,6 +20,8 @@ sudo apt install -y opscode-reporting
 sudo chef-server-ctl reconfigure
 sudo opscode-reporting-ctl reconfigure --accept-license
 
+
+sudo chef-server-ctl org-create devops 'devops' --association_user firstname_lastname --filename devops.pem
 ```
 
 
