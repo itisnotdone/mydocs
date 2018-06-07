@@ -1,10 +1,10 @@
 # Reference
 - General
   - https://cloudinit.readthedocs.io/en/latest/index.html
-- NoCloud
-  - Useful when dealing with KVM without any help from cloud solutions
-  - http://cloudinit.readthedocs.io/en/latest/topics/datasources/nocloud.html#datasource-nocloud
-  - https://gist.github.com/smoser/635897f845f7cb56c0a7ac3018a4f476
+# NoCloud
+- Useful when dealing with KVM without any help from cloud solutions
+- http://cloudinit.readthedocs.io/en/latest/topics/datasources/nocloud.html#datasource-nocloud
+- https://gist.github.com/smoser/635897f845f7cb56c0a7ac3018a4f476
 
 ## userdata.yml
 ```yaml
