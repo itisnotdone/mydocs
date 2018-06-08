@@ -24,6 +24,10 @@ config:
       - type: static
         address: 192.168.10.10/24
         gateway: 192.168.10.1
+      - type: nameserver:
+        address:
+          - 8.8.8.8
+
 ```
 ## Create a seed image and attach it into the instance as CD-ROOM
 ```bash
