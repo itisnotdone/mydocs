@@ -34,14 +34,14 @@ fi
 sudo apt install -y chefdk
 # to make embedded chef refer your custom repo
 
-chef gem install knife-zero
-
 # https://github.com/chef/chef-dk
 echo '' | tee -a ~/.bashrc
 echo 'eval "$(chef shell-init bash)"' | tee -a ~/.bashrc
 exit
 !ssh
 # logout and in
+
+chef gem install knife-zero
 
 # destroy default network for libvirt
 # virsh net-destroy default
