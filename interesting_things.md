@@ -46,3 +46,5 @@
 
 - Explicit Versioning
   - https://medium.com/sapioit/why-having-3-numbers-in-the-version-name-is-bad-92fc1f6bc73c
+- Pessimistic Operator
+  - https://robots.thoughtbot.com/rubys-pessimistic-operator
