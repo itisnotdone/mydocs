@@ -105,7 +105,7 @@ end
 kitchen login
 cd /tmp/kitchen
 vi cookbook_artifacts/$FIND_THE_RECIPE_AND_ADD_PRY
-chef-client -z -j dna.json -c client.rb
+sudo chef-client -z -j dna.json -c client.rb
 ```
 
 ## TODO
