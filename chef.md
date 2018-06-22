@@ -108,6 +108,14 @@ vi cookbook_artifacts/$FIND_THE_RECIPE_AND_ADD_PRY
 sudo chef-client -z -j dna.json -c client.rb
 ```
 
+## When where is an update on embeded ruby
+the file that contains trusted ca certificate list seems to be changed sometimes.
+```bash
+EMBEDDED_RUBY_CA_CERTS=$(sudo /opt/chef/embedded/bin/ruby -ropenssl -e 'puts OpenSSL::X509::DEFAULT_CERT_FILE')
+sudo mv -v $EMBEDDED_RUBY_CA_CERTS "$EMBEDDED_RUBY_CA_CERTS"_bak
+sudo ln -s /etc/ssl/certs/ca-certificates.crt $EMBEDDED_RUBY_CA_CERTS
+```
+
 ## TODO
 - bootstrap using local proxy or mirror
 
