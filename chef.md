@@ -46,17 +46,15 @@ knife solo cook ubuntu@solo01
 ```
 
 ## 'chef-client' with local mode
+i.e. running `maaster` cookbook
 ```bash
-## time to work on zero!!
-chef generate app demoApp
-cd demoApp
+mkdir -p chef-run/cookbooks
+git clone https://github.com/itisnotdone/maaster.git chef-run/cookbooks
+cd chef-run
 chef-client -z
 knife node list -z
 knife node show -z $HOSTNAME
-
-cd cookbooks/demoApp
-# edit metadata.rb and recipes/default.rb
-knife node run_list add -z $HOSTNAME demoApp
+knife node run_list add -z $HOSTNAME maaster
 sudo chef-client -z
 ```
 ## 'chef-client', 'local mode' and 'policy'
@@ -75,7 +73,7 @@ tar zxvf $COOKBOOK_NAME.tar.gz -C $COOKBOOK_NAME
 cd $COOKBOOK_NAME
 # follow instructions here
 # http://knife-zero.github.io/tips/with_policyfile/
-chef-client -z
+sudo chef-client -z
 ```
 
 ## How to use knife-vault
