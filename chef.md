@@ -48,8 +48,8 @@ knife solo cook ubuntu@solo01
 ## 'chef-client' with local mode
 i.e. running `maaster` cookbook
 ```bash
-mkdir -p chef-run/cookbooks
-git clone https://github.com/itisnotdone/maaster.git chef-run/cookbooks
+mkdir -p chef-run/cookbooks/maaster
+git clone https://github.com/itisnotdone/maaster.git chef-run/cookbooks/maaster
 cd chef-run
 chef-client -z
 knife node list -z
