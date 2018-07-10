@@ -40,8 +40,8 @@ openvswitch-switch
 echo "set-option -g history-limit 100000" | tee -a ~/.byobu/.tmux.conf
 
 # git config for user and email
-git config --global user.name "Don Draper"
-git config --global user.email "donoldfashioned@gmail.com"
+git config --global user.name \"Don Draper\"
+git config --global user.email \"donoldfashioned@gmail.com\"
 
 # Google Chrome
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | \
