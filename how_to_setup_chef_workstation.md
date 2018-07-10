@@ -14,8 +14,8 @@ echo "set-option -g history-limit 100000" | tee -a ~/.byobu/.tmux.conf
 # vi
 # https://github.com/itisnotdone/mydotfile.git
 
-EMAIL="donoldfashioned@gmail.com"
-NAME="Don Draper"
+EMAIL=\"donoldfashioned@gmail.com\"
+NAME=\"Don Draper\"
 
 # git config
 git config --global user.email $EMAIL
