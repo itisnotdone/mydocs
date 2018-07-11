@@ -118,11 +118,15 @@ sudo ln -s /etc/ssl/certs/ca-certificates.crt $EMBEDDED_RUBY_CA_CERTS
 - bootstrap using local proxy or mirror
 
 # Reference
-- Chef
+- Well-Known
   - https://www.chef.io/
   - https://docs.chef.io/
   - https://discourse.chef.io/
   - https://docs.chef.io/chef_deprecations_client.html
+- Advanced topics for writing cookbooks
+  - https://docs.chef.io/resource_common.html
+  - https://docs.chef.io/handlers.html
+  - https://docs.chef.io/custom_resources.html
 - chef_gem vs. gem_package
   - https://discourse.chef.io/t/chef-gem-vs-gem-package/4347
 - chef-client local mode
