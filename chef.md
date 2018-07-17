@@ -53,8 +53,8 @@ git clone https://github.com/itisnotdone/maaster.git chef-run/cookbooks/maaster
 cd chef-run
 chef-client -z
 knife node list -z
-knife node show -z $HOSTNAME
-knife node run_list add -z $HOSTNAME maaster
+knife node show -z `hostname -f`
+knife node run_list add -z `hostname -f` maaster
 sudo chef-client -z
 ```
 ## 'chef-client', 'local mode' and 'policy'
