@@ -71,6 +71,7 @@ kitchen status
 chef gem install kitchen-sync
 
 # ssh configuration
+echo | sudo tee -a /etc/ssh/ssh_config
 echo "StrictHostKeyChecking no" | sudo tee -a /etc/ssh/ssh_config
 echo "UserKnownHostsFile=/dev/null" | sudo tee -a /etc/ssh/ssh_config
 
