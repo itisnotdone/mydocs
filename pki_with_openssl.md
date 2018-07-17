@@ -99,6 +99,9 @@ should not be confused with the key passphrase, which is a separate feature.
   - https://www.openssl.org/docs/manmaster/man5/x509v3_config.html
 - Cryptography of SSH
   - https://www.mnin.org/write/2006_sshcrypto.html
+- NSS Shared DB
+  - https://wiki.mozilla.org/NSS_Shared_DB
+  - https://blogs.oracle.com/meena/whats-new-in-nss-312-new-shared-dbs
 
 ## Other solutions
 - http://pki.fedoraproject.org/wiki/PKI_Main_Page
