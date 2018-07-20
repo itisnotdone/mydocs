@@ -23,3 +23,26 @@ yum install -y tree vim mlocate psmisc bind-utils sysstat telnet
 ### To debug MAAS server
 - /usr/lib/python3/dist-packages/maasserver/djangosettings/settings.py
   - Change `DEBUG = False` to `DEBUG = True`
+
+## curtinator
+`curtinator` script invokes `virbr0` so either change the script or do not delete the bridge
+```bash
+sudo apt install -y qemu-kvm libvirt-bin virt-viewer genisoimage libguestfs-tools gettext-base
+
+sudo reboot
+
+sudo apt install -y bzr
+bzr branch lp:curtinator
+cd curtinator
+wget http://archive.ubuntu.com/ubuntu-cd/18.04/ubuntu-18.04-desktop-amd64.iso
+sudo bash -x ./scripts/curtinator ubuntu-18.04-desktop-amd64.iso
+```
+
+
+
+
+
+## References
+- curtin
+  - https://launchpad.net/curtinator
+  - https://bazaar.launchpad.net/~roadmr/curtinator/trunk/view/head:/README
