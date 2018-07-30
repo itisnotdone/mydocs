@@ -10,3 +10,10 @@
 sudo apt search nvidia-3 # Search for latest driver
 sudo apt install -y vim nvidia-384
 ```
+
+## CD burning suite
+https://brasero.en.uptodown.com/ubuntu
+
+## Bootable USB creator
+- mkusb
+  - https://help.ubuntu.com/community/mkusb
