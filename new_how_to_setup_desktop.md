@@ -19,4 +19,11 @@ git clone https://github.com/itisnotdone/init_desktop.git
 # change attributes and recipes to run as necessary
 
 
+
+
+
+
+
+# to move unity launcher to the bottom
+gsettings set com.canonical.Unity.Launcher launcher-position Bottom
 ```
