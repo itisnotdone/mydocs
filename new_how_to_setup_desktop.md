@@ -29,4 +29,8 @@ git clone https://github.com/itisnotdone/init_desktop.git
 
 # to move unity launcher to the bottom
 gsettings set com.canonical.Unity.Launcher launcher-position Bottom
+
+# run dconf-editor
+# org['gnome']['desktop']['wm']['keybindings']['switch-input-source'] = 'Hangul'
+# org['gnome']['desktop']['wm']['keybindings']['switch-input-source-backward'] = 'Hangul'
 ```
