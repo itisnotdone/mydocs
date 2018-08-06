@@ -31,9 +31,6 @@ Dec 20 02:00:31 ac1 kernel: [5083534.899884] neighbour: arp_cache: neighbor tabl
 Dec 20 02:00:31 ac1 kernel: [5083534.899951] neighbour: arp_cache: neighbor table overflow!
 Dec 20 02:00:31 ac1 kernel: [5083534.911095] neighbour: arp_cache: neighbor table overflow!
 Dec 20 02:00:31 ac1 kernel: [5083534.911163] neighbour: arp_cache: neighbor table overflow!
-Dec 20 02:00:31 ac1 kernel: [5083534.911218] neighbour: arp_cache: neighbor table overflow!
-Dec 20 02:00:31 ac1 kernel: [5083534.911272] neighbour: arp_cache: neighbor table overflow!
-Dec 20 02:00:52 ac1 kernel: [5083555.919711] neighbour: arp_cache: neighbor table overflow!
 ```
 #### Solution
 https://www.cyberciti.biz/faq/centos-redhat-debian-linux-neighbor-table-overflow/
@@ -44,4 +41,11 @@ net.ipv4.neigh.default.gc_stale_time = 600
 net.ipv4.neigh.default.gc_thresh3 = 4096
 net.ipv4.neigh.default.gc_thresh2 = 2048
 net.ipv4.neigh.default.gc_thresh1 = 1024
+```
+### etc
+Sometimes, container needs more privileges to archive its special requirements.
+```bash
+config:
+  raw.lxc: lxc.aa_profile=unconfined
+  security.privileged: "true"
 ```
