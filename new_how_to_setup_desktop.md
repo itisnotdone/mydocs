@@ -42,6 +42,9 @@ easeovs generate --config ~/go/src/github.com/itisnotdone/easeovs/template/singl
 # create a container to be a MAAS server
 gogetit create def-maas --no-maas --maas-on-lxc -f cloudinit_net_default.yml
 
+# install knife zero sub-command
+chef gem install knife-zero
+
 # to move unity launcher to the bottom
 gsettings set com.canonical.Unity.Launcher launcher-position Bottom
 
