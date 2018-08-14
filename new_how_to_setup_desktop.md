@@ -48,7 +48,7 @@ chef gem install knife-zero
 # to move unity launcher to the bottom
 gsettings set com.canonical.Unity.Launcher launcher-position Bottom
 
-# run dconf-editor
-# org['gnome']['desktop']['wm']['keybindings']['switch-input-source'] = 'Hangul'
-# org['gnome']['desktop']['wm']['keybindings']['switch-input-source-backward'] = 'Hangul'
+# to configure switch-input-source
+gsettings set org.gnome.desktop.wm.keybindings switch-input-source "['Hangul']"
+gsettings set org.gnome.desktop.wm.keybindings switch-input-source-backward "['Hangul']"
 ```
