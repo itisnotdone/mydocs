@@ -17,6 +17,7 @@
   - Special keys such as `<space>` and `<c-d>` can be used
 - Modal Mapping
   - `:nmap`, `:vmap`, `:imap`
+  - http://learnvimscriptthehardway.stevelosh.com/chapters/04.html
 
 
 
