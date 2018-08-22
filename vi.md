@@ -16,13 +16,18 @@
   - works in normal mode
   - Special keys such as `<space>` and `<c-d>` can be used
 - Modal Mapping
-  - `:nmap`, `:vmap`, `:imap`
+  - *map
+  - `:nmap, :vmap, :imap`
   - http://learnvimscriptthehardway.stevelosh.com/chapters/04.html
 - Unmapping
-  - `:nunmap`, `:vunmap`, `:iunmap`
+  - *unmap
+  - `:nunmap, :vunmap, :iunmap`
     - `:numap dd`
-
-
+- Be careful not to make recursive mapping
+- Nonrecursive Mapping
+  - *noremap
+  - `:noremap, :nnoremap, :vnoremap, :inoremap`
+- Use nonrecursive mapping `Always. No, seriously, always.`
 
 
 
