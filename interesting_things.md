@@ -35,6 +35,13 @@
   - A new way of defining network configuration on Ubuntu Bionic
   - https://insights.ubuntu.com/2017/12/01/ubuntu-bionic-netplan/
 
+- Network Virtualization and OS
+  - A list of network OSes
+    - https://packetpushers.net/virtual-toolbox/list-network-operating-systems/
+  - Commercial bare-metal switches
+    - https://bm-switch.com/index.php/
+    
+
 - Ruby library for hash
   - https://github.com/intridea/hashie
 
