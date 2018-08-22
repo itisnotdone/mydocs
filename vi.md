@@ -28,7 +28,9 @@
   - *noremap
   - `:noremap, :nnoremap, :vnoremap, :inoremap`
 - Use nonrecursive mapping `Always. No, seriously, always.`
-
+- Mapping key sequences using leader
+  - to avoid using keys that are being used already
+  - put leader which is a prefix key to map key sequences such as ',' and '-'
 
 
 
