@@ -18,6 +18,9 @@
 - Modal Mapping
   - `:nmap`, `:vmap`, `:imap`
   - http://learnvimscriptthehardway.stevelosh.com/chapters/04.html
+- Unmapping
+  - `:nunmap`, `:vunmap`, `:iunmap`
+    - `:numap dd`
 
 
 
