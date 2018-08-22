@@ -29,3 +29,6 @@
   - http://learnvimscriptthehardway.stevelosh.com/
 - neovim
   - https://neovim.io/
+  - Forked from vim 7.?
+  - Tries to make vim light weight and well organized in code-wide?
+  - Has not yet reached its major release, 1.0 but the contributions and requests are very robust.
