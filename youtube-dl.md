@@ -1,9 +1,11 @@
-# Install
+# youtube-dl
+
+## Install
 ```bash
 sudo apt install -y youtube-dl
 ```
 
-# List available formats
+## List available formats
 ```bash
 youtube-dl -F URL
 [youtube] BLAHBLAHBLAH: Downloading webpage
@@ -33,11 +35,11 @@ format code  extension  resolution note
 18           mp4        640x360    medium , avc1.42001E,  mp4a.40.2@ 96k
 22           mp4        1280x720   hd720 , avc1.64001F,  mp4a.40.2@192k (best)
 ```
-# Download with a specific format
+## Download with a specific format
 ```bash
 youtube-dl -f FORMAT_CODE URL
 ```
-# Rename the file removing spaces
+## Rename the file removing spaces
 ```bash
 mv "`ls -1t | head -1`" `ls -1t | head -1 | sed 's/\( \| - \)/_/g'`
 ```
