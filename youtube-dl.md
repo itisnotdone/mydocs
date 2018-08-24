@@ -1,3 +1,8 @@
+# Install
+```bash
+sudo apt install -y youtube-dl
+```
+
 # List available formats
 ```bash
 youtube-dl -F URL
