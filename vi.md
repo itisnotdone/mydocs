@@ -31,7 +31,7 @@
 - Mapping key sequences using leader
   - to avoid using keys that are being used already
   - put leader which is a prefix key to map key sequences such as ',' and '-'
-
+  
 # How to check loaded scripts, functions and variables
 - https://stackoverflow.com/a/48952
   - :scriptnames            : list all plugins, `_vimrcs` loaded (super)  
@@ -42,6 +42,12 @@
 # things to keep in mind
 - Autocommands can be duplicated
   - The problem is that sourcing your ~/.vimrc file rereads the entire file, including any autocommands you've defined! This means that every time you source your ~/.vimrc you'll be duplicating autocommands, which will make Vim run slower because it executes the same commands over and over.
+
+# Else
+- Running VIM command on command line
+  - `vim -c smile`, `vim -c ':smile'` or `vim +smile`
+- Script like execution
+  - `vim -c '%s/words_to_change/words_to_be_replaced/g | write | quit' target_file.txt`
 
 # References
 - Learn Vimscript the Hard Way
