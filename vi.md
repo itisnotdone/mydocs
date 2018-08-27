@@ -40,7 +40,18 @@
   - :function               : list functions  
   - :func SearchCompl       : List particular function
 
-## things to keep in mind
+## Using `vipe`
+- will let you edit things through pipe
+- `echo 'how things are going?' | EDITOR='vim' vipe`
+- to let someone edit an existing file and then save the result
+  - `cat test.txt | EDITOR='vim' vipe | tee test.txt`
+- When `vipe` is executed, it will open $EDITOR with the input entered through the pipe
+  
+## Redirecting result of VIM command to STDOUT
+- `vim -c "redir! > vimout | scriptnames | redir END | q"`
+- `vim -c ':set t_ti= t_te= nomore' -c 'scriptnames|q!'`
+
+## Things to keep in mind
 - Autocommands can be duplicated
   - The problem is that sourcing your ~/.vimrc file rereads the entire file, including any autocommands you've defined! This means that every time you source your ~/.vimrc you'll be duplicating autocommands, which will make Vim run slower because it executes the same commands over and over.
 
