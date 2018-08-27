@@ -40,7 +40,7 @@
   - :function               : list functions  
   - :func SearchCompl       : List particular function
 
-## Using `vipe`
+## `vipe`
 - will let you edit things through pipe
 - `echo 'how things are going?' | EDITOR='vim' vipe`
 - to let someone edit an existing file and then save the result
@@ -50,6 +50,17 @@
 ## Redirecting result of VIM command to STDOUT
 - `vim -c "redir! > vimout | scriptnames | redir END | q"`
 - `vim -c ':set t_ti= t_te= nomore' -c 'scriptnames|q!'`
+
+## ex mode
+- `echo '%s/blah/blahblahblah/g | write' | vim -e blah.txt`
+- 
+```bash
+cat test.vim 
+%s/blah/blahblahblah/g
+write
+
+vim -e blah.txt < test.vim
+```
 
 ## Things to keep in mind
 - Autocommands can be duplicated
