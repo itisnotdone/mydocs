@@ -39,6 +39,10 @@
   - :function               : list functions  
   - :func SearchCompl       : List particular function
 
+# things to keep in mind
+- Autocommands can be duplicated
+  - The problem is that sourcing your ~/.vimrc file rereads the entire file, including any autocommands you've defined! This means that every time you source your ~/.vimrc you'll be duplicating autocommands, which will make Vim run slower because it executes the same commands over and over.
+
 # References
 - Learn Vimscript the Hard Way
   - http://learnvimscriptthehardway.stevelosh.com/
