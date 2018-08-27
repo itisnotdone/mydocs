@@ -1,4 +1,5 @@
-# Setting options
+# VIM Script
+## Setting options
 - Toggling boolean options
   - `:set <name>` and `:set no<name>` or `:set <name>!`
 - Checking options state
@@ -10,7 +11,7 @@
 - Setting multiple options at once
   - `:set <name1> <name2>=6`
   - Setting options without '=' operation is setting boolean option
-# Mapping
+## Mapping
 - Basic mapping
   - `:map`
   - works in normal mode
@@ -32,24 +33,24 @@
   - to avoid using keys that are being used already
   - put leader which is a prefix key to map key sequences such as ',' and '-'
   
-# How to check loaded scripts, functions and variables
+## How to check loaded scripts, functions and variables
 - https://stackoverflow.com/a/48952
   - :scriptnames            : list all plugins, `_vimrcs` loaded (super)  
   - :verbose set history?   : reveals value of history and where set  
   - :function               : list functions  
   - :func SearchCompl       : List particular function
 
-# things to keep in mind
+## things to keep in mind
 - Autocommands can be duplicated
   - The problem is that sourcing your ~/.vimrc file rereads the entire file, including any autocommands you've defined! This means that every time you source your ~/.vimrc you'll be duplicating autocommands, which will make Vim run slower because it executes the same commands over and over.
 
-# Else
+## Else
 - Running VIM command on command line
   - `vim -c smile`, `vim -c ':smile'` or `vim +smile`
 - Script like execution
   - `vim -c '%s/words_to_change/words_to_be_replaced/g | write | quit' target_file.txt`
 
-# References
+## References
 - Learn Vimscript the Hard Way
   - http://learnvimscriptthehardway.stevelosh.com/
 - neovim
