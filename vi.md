@@ -32,7 +32,12 @@
   - to avoid using keys that are being used already
   - put leader which is a prefix key to map key sequences such as ',' and '-'
 
-
+# How to check loaded scripts, functions and variables
+- https://stackoverflow.com/a/48952
+  - :scriptnames            : list all plugins, `_vimrcs` loaded (super)  
+  - :verbose set history?   : reveals value of history and where set  
+  - :function               : list functions  
+  - :func SearchCompl       : List particular function
 
 # References
 - Learn Vimscript the Hard Way
