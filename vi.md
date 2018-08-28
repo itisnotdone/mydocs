@@ -75,6 +75,11 @@ vim -e blah.txt < test.vim
 ## References
 - Learn Vimscript the Hard Way
   - http://learnvimscriptthehardway.stevelosh.com/
+- Combination of command and object
+  - https://blog.carbonfive.com/2011/10/17/vim-text-objects-the-definitive-guide/
+- Cheat Sheet
+  - http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html
+  - https://devhints.io/vim
 - neovim
   - https://neovim.io/
   - Forked from vim 7.?
