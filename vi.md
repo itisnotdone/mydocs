@@ -1,4 +1,11 @@
 # VIM Script
+
+## Combination of command and object 
+Operator | Object Range Indicator | Object Range Symbol
+------------ | ------------- | -------------
+c, d, v  | i, t, / | w, s, p
+
+
 ## Setting options
 - Toggling boolean options
   - `:set <name>` and `:set no<name>` or `:set <name>!`
