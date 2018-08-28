@@ -1,22 +1,12 @@
 # VIM Script
 
 ## Combination of command and object
-### in rst
-+----------------+------------------------+---------------------+
-|    Operator    | Object Range Indicator | Object Range Symbol |
-|================|========================|=====================|
-|    c, d, v     |            i           |       w, s, p       |
-+                +------------------------+---------------------+
-|                |            t           |     a character     |
-+                +------------------------+---------------------+
-|                |            /           |    word to search   |
-+----------------+------------------------+---------------------+
 ### in md
-|    Operator    | Object Range Indicator | Object Range Symbol |
-|:--------------:|:----------------------:|:-------------------:|
-|    c, d, v     |            i           |    w, s, p, t(tag)  |
-|                |        t(until)        |     a character     |
-|                |            /           |    word to search   |
+|    Operator    | Object Range Indicator |         Object Range Symbol         |
+|:--------------:|:----------------------:|:-----------------------------------:|
+|    `c d v`     |          `i`           |  `w  s  p  t(tag)  [  (  {  < b B`  |
+|                |       `t(until)`       |             a character             |
+|                |           `/`          |            word to search           |
 
 
 
