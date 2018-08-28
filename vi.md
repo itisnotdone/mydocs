@@ -2,11 +2,11 @@
 
 ## Combination of command and object
 ### in md
-|    Operator    | Object Range Indicator |         Object Range Symbol          |
-|:--------------:|:----------------------:|:------------------------------------:|
+|    Operator    | Object Range Indicator |           Object Range Symbol            |
+|:--------------:|:----------------------:|:----------------------------------------:|
 |    `c d v`     |          `i`           |  `w  s  p  t`(tag)`[  (  {  < b B ' "`   |
-|                |       `t`(until)       |             a character              |
-|                |           `/`          |            word to search            |
+|                |       `t`(until)       |             a character matched          |
+|                |           `/`          |              word to search              |
 
 
 
