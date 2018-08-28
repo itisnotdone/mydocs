@@ -1,9 +1,12 @@
 # VIM Script
 
 ## Combination of command and object 
-Operator | Object Range Indicator | Object Range Symbol
------------- | ------------- | -------------
-c, d, v  | i, t, / | w, s, p
+|    Operator    | Object Range Indicator | Object Range Symbol |
+| :------------: | :--------------------: | :-----------------: |
+|    c, d, v     |            i           |       w, s, p       |
+|                |            t           |     a character     |
+|                |            /           |    word to search   |
+
 
 
 ## Setting options
