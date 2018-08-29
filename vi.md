@@ -9,7 +9,6 @@
 |                |           `/`          |              word to search              |
 
 
-
 ## Setting options
 - Toggling boolean options
   - `:set <name>` and `:set no<name>` or `:set <name>!`
@@ -28,22 +27,28 @@
   - works in normal mode
   - Special keys such as `<space>` and `<c-d>` can be used
 - Modal Mapping
-  - *map
+  - `*`map
   - `:nmap, :vmap, :imap`
   - http://learnvimscriptthehardway.stevelosh.com/chapters/04.html
 - Unmapping
-  - *unmap
+  - `*`unmap
   - `:nunmap, :vunmap, :iunmap`
     - `:numap dd`
 - Be careful not to make recursive mapping
 - Nonrecursive Mapping
-  - *noremap
+  - `*`noremap
   - `:noremap, :nnoremap, :vnoremap, :inoremap`
 - Use nonrecursive mapping `Always. No, seriously, always.`
 - Mapping key sequences using leader
   - to avoid using keys that are being used already
   - put leader which is a prefix key to map key sequences such as ',' and '-'
-  
+- Operator-Pending Mapping
+  - `:onoremap p i(`
+
+## Good-to-knows
+- `:normal >>`
+  - will shift the sentense two times from the cursor
+
 ## How to check loaded scripts, functions and variables
 - https://stackoverflow.com/a/48952
   - :scriptnames            : list all plugins, `_vimrcs` loaded (super)  
