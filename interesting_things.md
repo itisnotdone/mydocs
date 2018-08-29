@@ -58,3 +58,7 @@
 
 - Difference between rst and md
   - http://www.zverovich.net/2016/06/16/rst-vs-markdown.html
+
+- Markdown Practice
+  - http://markdownlivepreview.com/
+  - https://www.markdowntutorial.com/lesson/1/
