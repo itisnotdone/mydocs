@@ -55,3 +55,6 @@
   - https://medium.com/sapioit/why-having-3-numbers-in-the-version-name-is-bad-92fc1f6bc73c
 - Pessimistic Operator
   - https://robots.thoughtbot.com/rubys-pessimistic-operator
+
+- Difference between rst and md
+  - http://www.zverovich.net/2016/06/16/rst-vs-markdown.html
