@@ -17,3 +17,9 @@ https://brasero.en.uptodown.com/ubuntu
 ## Bootable USB creator
 - mkusb
   - https://help.ubuntu.com/community/mkusb
+
+## Application selection to execute
+```bash
+# for text file editor
+sudo update-alternatives --config editor
+```
