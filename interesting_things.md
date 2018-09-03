@@ -65,3 +65,6 @@
 
 - QEMU/KVM inside LXD
   - https://dshcherb.github.io/2017/12/04/qemu-kvm-virtual-machines-in-unprivileged-lxd.html
+
+- /etc/network/interfaces with Openvswitch
+  - https://bugs.launchpad.net/ubuntu/+source/openvswitch/+bug/1448254
