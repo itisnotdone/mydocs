@@ -67,4 +67,5 @@
   - https://dshcherb.github.io/2017/12/04/qemu-kvm-virtual-machines-in-unprivileged-lxd.html
 
 - /etc/network/interfaces with Openvswitch
+  - https://github.com/openvswitch/ovs/blob/master/debian/openvswitch-switch.README.Debian
   - https://bugs.launchpad.net/ubuntu/+source/openvswitch/+bug/1448254
