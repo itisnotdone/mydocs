@@ -23,3 +23,5 @@ https://brasero.en.uptodown.com/ubuntu
 # for text file editor
 sudo update-alternatives --config editor
 ```
+## How to cut off video
+ffmpeg -ss 00:00:00 -i test.mkv -codec copy -t 00:20:00 out.mkv
