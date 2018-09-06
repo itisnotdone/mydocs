@@ -25,3 +25,18 @@ sudo update-alternatives --config editor
 ```
 ## How to cut off video
 ffmpeg -ss 00:00:00 -i test.mkv -codec copy -t 00:20:00 out.mkv
+
+## How to deal with multiple DNS servers
+```bash
+cat /etc/network/interfaces
+
+auto lo
+iface lo inet loopback
+  dns-domain default.don
+
+cat /etc/dnsmasq.conf | tail -n 2
+server=/default.don/172.31.0.2
+server=/second.don/172.31.1.2
+
+sudo systemctl status dnsmasq.service
+```
