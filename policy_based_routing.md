@@ -13,7 +13,7 @@ https://wiki.gentoo.org/wiki/Policy_based_routing#Requirements
 When a server needs to route packets to a specific client(destination), the routing entry will be as follow.
 - Source: the IP addresse of the output interface of the server
 - Gate Device: the output interface of the server
-- Gateway: the gateway IP of the network of source IP
+- Gateway: the gateway IP of the network where the source IP is
 - Destination: the IP addresse or CIDR of the clients
 
 
