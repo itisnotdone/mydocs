@@ -1,0 +1,3 @@
+- when installing using server live iso, UEFI must be used somehow to complete installation successfully
+- stop and disable systemd-resolved
+- comment all netplan configuration(and 'netplan apply'), install 'ifupdown' package and configure /etc/network/interfaces if you want to bind IP address on OVS bridge
