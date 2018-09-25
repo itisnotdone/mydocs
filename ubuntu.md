@@ -34,7 +34,6 @@ auto lo
 iface lo inet loopback
   dns-domain default.don
 
-cat /etc/dnsmasq.conf | tail -n 2
 server=/default.don/172.31.0.2
 server=/second.don/172.31.1.2
 server=8.8.8.8
