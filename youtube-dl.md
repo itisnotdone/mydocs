@@ -38,6 +38,8 @@ format code  extension  resolution note
 ## Download with a specific format
 ```bash
 youtube-dl -f FORMAT_CODE URL
+
+youtube-dl -f 140 URL # URL can be ether a video or a playlist
 ```
 ## Rename the file removing spaces
 ```bash
