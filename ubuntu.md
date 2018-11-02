@@ -40,3 +40,6 @@ server=8.8.8.8
 
 sudo systemctl restart dnsmasq.service
 ```
+## Gnome shortcuts
+Key / Command
+- ctrl + g / google-chrome
