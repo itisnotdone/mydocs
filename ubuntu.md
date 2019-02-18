@@ -43,3 +43,6 @@ sudo systemctl restart dnsmasq.service
 ## Gnome custom shortcuts
 Key / Command
 - ctrl + g / google-chrome
+
+## mpv player
+echo "volume=30" > ~/.config/mpv/mpv.conf
