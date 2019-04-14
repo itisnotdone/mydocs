@@ -62,6 +62,7 @@
 - Markdown Practice
   - http://markdownlivepreview.com/
   - https://www.markdowntutorial.com/lesson/1/
+  - https://github.com/euclio/vim-markdown-composer/blob/master/README.md
 
 - QEMU/KVM inside LXD
   - https://dshcherb.github.io/2017/12/04/qemu-kvm-virtual-machines-in-unprivileged-lxd.html
