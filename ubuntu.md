@@ -51,3 +51,9 @@ Key / Command
 
 ## mpv player
 echo "volume=30" > ~/.config/mpv/mpv.conf
+
+## How to zero a disk
+sudo dd if=/dev/zero of=/dev/sdb status=progress
+
+## How to simpely check storage performance
+while true; do dd if=/dev/zero of=test.txt status=progress oflag=direct bs=1G; done
