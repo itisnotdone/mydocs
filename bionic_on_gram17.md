@@ -10,6 +10,12 @@ DISTRIB_DESCRIPTION="Ubuntu 19.04"
 uname -r
 5.0.0-13-generic
 
+sudo apt update && sudo apt full-upgrade -y && sudo apt autoremove -y
+
+sudo apt install -y net-tools ssh vim byobu
+
+echo "don ALL = (root) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/don && sudo chmod 0440 /etc/sudoers.d/don
+
 cat /etc/default/grub | grep GRUB_CMDLINE_LINUX_DEFAULT
 GRUB_CMDLINE_LINUX_DEFAULT="quiet splash acpi=strict"
 
@@ -26,11 +32,6 @@ sudo shutdown -h now
 
 cat /proc/cmdline 
 BOOT_IMAGE=/boot/vmlinuz-5.0.0-13-generic root=UUID=69a25ad8-bd99-47ea-88db-f812374fe085 ro quiet splash acpi=strict vt.handoff=1
-
-sudo apt update && sudo apt full-upgrade -y && sudo apt autoremove -y
-
-sudo apt install -y net-tools ssh vim byobu
-
 
 ```
 # Reference
