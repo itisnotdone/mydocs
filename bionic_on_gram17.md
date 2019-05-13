@@ -12,7 +12,7 @@ uname -r
 
 sudo apt update && sudo apt full-upgrade -y && sudo apt autoremove -y
 
-sudo apt install -y net-tools ssh vim byobu
+sudo apt install -y net-tools ssh vim byobu git tree
 
 echo "don ALL = (root) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/don && sudo chmod 0440 /etc/sudoers.d/don
 
