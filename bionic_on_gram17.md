@@ -16,6 +16,8 @@ sudo apt install -y net-tools ssh vim byobu git tree
 
 echo "don ALL = (root) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/don && sudo chmod 0440 /etc/sudoers.d/don
 
+sudo update-alternatives --config editor /usr/bin/vim.basic
+
 cat /etc/default/grub | grep GRUB_CMDLINE_LINUX_DEFAULT
 GRUB_CMDLINE_LINUX_DEFAULT="quiet splash acpi=strict"
 
