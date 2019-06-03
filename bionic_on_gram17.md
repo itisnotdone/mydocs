@@ -12,7 +12,7 @@ uname -r
 
 sudo apt update && sudo apt full-upgrade -y && sudo apt autoremove -y
 
-sudo apt install -y net-tools ssh vim byobu git tree
+sudo apt install -y net-tools ssh vim byobu git tree qmmp zfsutils-linux
 
 echo "don ALL = (root) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/don && sudo chmod 0440 /etc/sudoers.d/don
 
@@ -35,6 +35,7 @@ sudo shutdown -h now
 cat /proc/cmdline 
 BOOT_IMAGE=/boot/vmlinuz-5.0.0-13-generic root=UUID=69a25ad8-bd99-47ea-88db-f812374fe085 ro quiet splash acpi=strict vt.handoff=1
 
+sudo snap install lxd
 ```
 # Reference
 - https://www.linuxquestions.org/questions/linux-kernel-70/ubuntu-18-04-acpi-errors-on-boot-on-dell-inspiron-15-5000-series-4175641092/#post5931616
