@@ -11,6 +11,24 @@ sudo apt search nvidia-3 # Search for latest driver
 sudo apt install -y vim nvidia-384
 ```
 
+## Clipboard manager
+- You can make it auto-start when boot
+- Enable VI like control to select items
+```bash
+sudo apt install -y copyq
+
+
+# When using CLI
+copyq tab clipboard add "blahblahblah"
+copyq tab clipboard read 0
+# the tab 'cliboard' is default tab used with GUI
+
+```
+
+## A simple music player
+sudo apt install -y qmmp
+
+
 ## CD burning suite
 https://brasero.en.uptodown.com/ubuntu
 
