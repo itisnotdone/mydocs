@@ -20,6 +20,12 @@ NAME="Don Draper"
 # git config
 git config --global user.email "$EMAIL"
 git config --global user.name "$NAME"
+
+# or add following lines to .git/config
+[user]
+  name = Don Draper
+  email = donoldfashioned@gmail.com
+
 git config --list | egrep 'email|name'
 
 # chefdk
